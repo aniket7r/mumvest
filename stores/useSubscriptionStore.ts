@@ -23,6 +23,7 @@ interface SubscriptionState {
   purchaseAnnual: () => Promise<boolean>;
   restorePurchases: () => Promise<boolean>;
   checkEntitlement: (info?: any) => boolean;
+  webUnlock: () => void;
 }
 
 export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
@@ -38,9 +39,10 @@ export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
       return;
     }
 
-    // On web, grant Pro access so judges can explore everything
+    // On web, start as free tier so judges can see the full monetization flow
+    // They can upgrade via the paywall which instantly unlocks Pro
     if (Platform.OS === 'web') {
-      set({ isPro: true, isLoading: false });
+      set({ isPro: false, isLoading: false });
       return;
     }
 
@@ -64,8 +66,13 @@ export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
     }
   },
 
+  webUnlock: () => {
+    mmkv.set('judge.unlocked', true);
+    set({ isPro: true });
+  },
+
   purchaseMonthly: async () => {
-    if (Platform.OS === 'web') return false;
+    if (Platform.OS === 'web') { get().webUnlock(); return true; }
     try {
       const { currentOffering } = get();
       const monthly = currentOffering?.monthly;
@@ -83,7 +90,7 @@ export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
   },
 
   purchaseAnnual: async () => {
-    if (Platform.OS === 'web') return false;
+    if (Platform.OS === 'web') { get().webUnlock(); return true; }
     try {
       const { currentOffering } = get();
       const annual = currentOffering?.annual;
@@ -101,7 +108,7 @@ export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
   },
 
   restorePurchases: async () => {
-    if (Platform.OS === 'web') return false;
+    if (Platform.OS === 'web') { get().webUnlock(); return true; }
     try {
       const customerInfo = await Purchases.restorePurchases();
       const isPro = get().checkEntitlement(customerInfo);
