@@ -1,7 +1,9 @@
+import { Platform } from 'react-native';
 import { db } from './client';
 import { sql } from 'drizzle-orm';
 
 export async function runMigrations() {
+  if (Platform.OS === 'web') return; // No SQLite on web
   await db.run(sql`
     CREATE TABLE IF NOT EXISTS user_profile (
       id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { Platform } from 'react-native';
 import { db, schema } from '../db/client';
 import { eq } from 'drizzle-orm';
 import { mmkv, KEYS } from './mmkv';
@@ -48,6 +49,29 @@ export const useUserStore = create<UserState>((set, get) => ({
           memberSince: mmkv.getString(KEYS.APP_FIRST_LAUNCH) || user.createdAt,
           isLoading: false,
         });
+        return;
+      }
+
+      // Web fallback: db returns empty but mmkv has onboarding data
+      if (Platform.OS === 'web') {
+        const selectionsJson = mmkv.getString(KEYS.ONBOARDING_SELECTIONS);
+        if (selectionsJson) {
+          try {
+            const selections = JSON.parse(selectionsJson) as OnboardingSelections;
+            set({
+              name: selections.name,
+              financialSituation: selections.situation as FinancialSituation,
+              notificationTime: selections.notificationTime || '08:00',
+              notificationEnabled: selections.notificationsEnabled ?? true,
+              onboardingCompleted: true,
+              memberSince: mmkv.getString(KEYS.APP_FIRST_LAUNCH) || new Date().toISOString().split('T')[0],
+              isLoading: false,
+            });
+            return;
+          } catch {}
+        }
+        // mmkv says done but no selections stored — still mark as complete
+        set({ onboardingCompleted: true, isLoading: false });
         return;
       }
     }
