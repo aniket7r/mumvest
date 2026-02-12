@@ -106,23 +106,28 @@ export default function SettingsScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-4">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <Text className="text-charcoal text-xl font-bold">Settings</Text>
+        <Text className="text-charcoal text-2xl font-bold">Settings</Text>
       </View>
 
       <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
-        {MENU_ITEMS.map((item) => (
+        <Text className="text-warmgrey text-xs mb-2.5 font-bold tracking-wider">GENERAL</Text>
+        {MENU_ITEMS.map((item, idx) => (
           <TouchableOpacity
             key={item.title}
             onPress={item.onPress}
-            className="bg-white rounded-xl px-4 py-4 mb-2 flex-row items-center"
+            className={`bg-white px-4 py-4 flex-row items-center ${
+              idx === 0 ? 'rounded-t-2xl' : ''
+            } ${idx === MENU_ITEMS.length - 1 ? 'rounded-b-2xl' : 'border-b border-border'}`}
             activeOpacity={0.7}
           >
-            <Ionicons name={item.icon} size={22} color={colors.textSecondary} />
-            <Text className="text-charcoal text-base flex-1 ml-3">{item.title}</Text>
+            <View className="w-9 h-9 rounded-full bg-cream items-center justify-center">
+              <Ionicons name={item.icon} size={20} color={colors.textSecondary} />
+            </View>
+            <Text className="text-charcoal text-base font-medium flex-1 ml-3">{item.title}</Text>
             {item.subtitle && (
               <Text className="text-warmgrey text-sm mr-2">{item.subtitle}</Text>
             )}
@@ -131,28 +136,32 @@ export default function SettingsScreen() {
         ))}
 
         {/* Support */}
-        <Text className="text-warmgrey text-xs mt-6 mb-2 font-semibold">SUPPORT</Text>
+        <Text className="text-warmgrey text-xs mt-8 mb-2.5 font-bold tracking-wider">SUPPORT</Text>
         <TouchableOpacity
           onPress={() => Linking.openURL('mailto:hello@mumvest.app?subject=MumVest Feedback')}
-          className="bg-white rounded-t-xl px-4 py-3.5 flex-row items-center border-b border-border"
+          className="bg-white rounded-t-2xl px-4 py-4 flex-row items-center border-b border-border"
           activeOpacity={0.7}
         >
-          <Ionicons name="chatbox-outline" size={22} color={colors.textSecondary} />
-          <Text className="text-charcoal text-base flex-1 ml-3">Send Feedback</Text>
+          <View className="w-9 h-9 rounded-full bg-cream items-center justify-center">
+            <Ionicons name="chatbox-outline" size={20} color={colors.textSecondary} />
+          </View>
+          <Text className="text-charcoal text-base font-medium flex-1 ml-3">Send Feedback</Text>
           <Ionicons name="open-outline" size={16} color={colors.textTertiary} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => Alert.alert('About MumVest', 'MumVest helps busy mums build money confidence through daily tips, savings goals, and smart money swaps.\n\nFounded by Rebecca Louise.\nVersion 1.0.0\n\nMade with love for families everywhere.')}
-          className="bg-white rounded-b-xl px-4 py-3.5 flex-row items-center mb-3"
+          className="bg-white rounded-b-2xl px-4 py-4 flex-row items-center mb-3"
           activeOpacity={0.7}
         >
-          <Ionicons name="information-circle-outline" size={22} color={colors.textSecondary} />
-          <Text className="text-charcoal text-base flex-1 ml-3">About MumVest</Text>
+          <View className="w-9 h-9 rounded-full bg-cream items-center justify-center">
+            <Ionicons name="information-circle-outline" size={20} color={colors.textSecondary} />
+          </View>
+          <Text className="text-charcoal text-base font-medium flex-1 ml-3">About MumVest</Text>
           <Ionicons name="chevron-forward" size={18} color={colors.textTertiary} />
         </TouchableOpacity>
 
         {/* Account */}
-        <Text className="text-warmgrey text-xs mt-4 mb-2 font-semibold">ACCOUNT</Text>
+        <Text className="text-warmgrey text-xs mt-8 mb-2.5 font-bold tracking-wider">ACCOUNT</Text>
         <TouchableOpacity
           onPress={() => Alert.alert(
             'Reset Progress',
@@ -169,11 +178,13 @@ export default function SettingsScreen() {
               },
             ]
           )}
-          className="bg-white rounded-t-xl px-4 py-3.5 flex-row items-center border-b border-border"
+          className="bg-white rounded-t-2xl px-4 py-4 flex-row items-center border-b border-border"
           activeOpacity={0.7}
         >
-          <Ionicons name="refresh-outline" size={22} color={colors.textSecondary} />
-          <Text className="text-charcoal text-base flex-1 ml-3">Reset Progress</Text>
+          <View className="w-9 h-9 rounded-full bg-amber-light items-center justify-center">
+            <Ionicons name="refresh-outline" size={20} color={colors.textSecondary} />
+          </View>
+          <Text className="text-charcoal text-base font-medium flex-1 ml-3">Reset Progress</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => Alert.alert(
@@ -191,35 +202,41 @@ export default function SettingsScreen() {
               },
             ]
           )}
-          className="bg-white rounded-b-xl px-4 py-3.5 flex-row items-center mb-3"
+          className="bg-white rounded-b-2xl px-4 py-4 flex-row items-center mb-3"
           activeOpacity={0.7}
         >
-          <Ionicons name="trash-outline" size={22} color={colors.error} />
-          <Text className="text-error text-base flex-1 ml-3">Delete Account</Text>
+          <View className="w-9 h-9 rounded-full bg-coral-light items-center justify-center">
+            <Ionicons name="trash-outline" size={20} color={colors.error} />
+          </View>
+          <Text className="text-error text-base font-medium flex-1 ml-3">Delete Account</Text>
         </TouchableOpacity>
 
         {/* Legal */}
-        <Text className="text-warmgrey text-xs mt-4 mb-2 font-semibold">LEGAL</Text>
+        <Text className="text-warmgrey text-xs mt-8 mb-2.5 font-bold tracking-wider">LEGAL</Text>
         <TouchableOpacity
           onPress={() => Linking.openURL('https://mumvest.app/privacy')}
-          className="bg-white rounded-t-xl px-4 py-3.5 flex-row items-center border-b border-border"
+          className="bg-white rounded-t-2xl px-4 py-4 flex-row items-center border-b border-border"
           activeOpacity={0.7}
         >
-          <Ionicons name="shield-checkmark-outline" size={22} color={colors.textSecondary} />
-          <Text className="text-charcoal text-base flex-1 ml-3">Privacy Policy</Text>
+          <View className="w-9 h-9 rounded-full bg-cream items-center justify-center">
+            <Ionicons name="shield-checkmark-outline" size={20} color={colors.textSecondary} />
+          </View>
+          <Text className="text-charcoal text-base font-medium flex-1 ml-3">Privacy Policy</Text>
           <Ionicons name="open-outline" size={16} color={colors.textTertiary} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => Linking.openURL('https://mumvest.app/terms')}
-          className="bg-white rounded-b-xl px-4 py-3.5 flex-row items-center mb-3"
+          className="bg-white rounded-b-2xl px-4 py-4 flex-row items-center mb-3"
           activeOpacity={0.7}
         >
-          <Ionicons name="document-text-outline" size={22} color={colors.textSecondary} />
-          <Text className="text-charcoal text-base flex-1 ml-3">Terms of Service</Text>
+          <View className="w-9 h-9 rounded-full bg-cream items-center justify-center">
+            <Ionicons name="document-text-outline" size={20} color={colors.textSecondary} />
+          </View>
+          <Text className="text-charcoal text-base font-medium flex-1 ml-3">Terms of Service</Text>
           <Ionicons name="open-outline" size={16} color={colors.textTertiary} />
         </TouchableOpacity>
-        <View className="bg-white rounded-xl px-4 py-3 mb-6">
-          <Text className="text-warmgrey text-xs leading-5">
+        <View className="bg-white rounded-2xl px-5 py-4 mb-6">
+          <Text className="text-warmgrey/60 text-xs leading-5">
             MumVest provides general financial education only. Nothing in this app constitutes financial advice. Always consult a qualified financial advisor for decisions specific to your situation. Past performance and savings estimates are not guarantees of future results.
           </Text>
         </View>

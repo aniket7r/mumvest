@@ -16,13 +16,13 @@ export function EmptyState({ emoji, title, subtitle, actionLabel, onAction }: Em
       from={{ opacity: 0, translateY: 20 }}
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ type: 'timing', duration: 500 }}
-      className="items-center justify-center py-12 px-8"
+      className="items-center justify-center py-16 px-10"
     >
-      <Text className="text-5xl mb-4">{emoji}</Text>
-      <Text className="text-charcoal text-lg font-bold text-center mb-2">{title}</Text>
-      <Text className="text-warmgrey text-sm text-center leading-5 mb-6">{subtitle}</Text>
+      <Text className="text-6xl mb-6">{emoji}</Text>
+      <Text className="text-charcoal text-xl font-heading text-center mb-3">{title}</Text>
+      <Text className="text-warmgrey text-sm text-center leading-6 mb-8">{subtitle}</Text>
       {actionLabel && onAction && (
-        <Button title={actionLabel} onPress={onAction} variant="primary" size="sm" />
+        <Button title={actionLabel} onPress={onAction} variant="primary" size="sm" fullWidth={false} />
       )}
     </MotiView>
   );

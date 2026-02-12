@@ -54,8 +54,8 @@ export default function LessonScreen() {
     // Check if this completes the level
     try {
       const levelLessons = LESSONS_BY_LEVEL[lesson.level] || [];
-      const progress = await db.select().from(schema.lessonProgress);
-      const completedIds = new Set(progress.filter((p) => p.isCompleted).map((p) => p.lessonId));
+      const progress: any[] = await db.select().from(schema.lessonProgress);
+      const completedIds = new Set<string>(progress.filter((p: any) => p.isCompleted).map((p: any) => p.lessonId));
       completedIds.add(lesson.id); // include current
       const allLevelDone = levelLessons.every((l) => completedIds.has(l.id));
       if (allLevelDone) {
@@ -87,12 +87,15 @@ export default function LessonScreen() {
         <View className="absolute bottom-12 left-5 right-5">
           {showPaywall ? (
             <>
-              <Text className="text-charcoal text-base font-semibold text-center mb-3">
+              <Text className="text-charcoal text-lg font-bold text-center mb-2">
                 Ready for the next chapter?
               </Text>
+              <Text className="text-warmgrey text-sm text-center mb-4">
+                Unlock all levels to continue your journey
+              </Text>
               <Button title="Unlock All Levels" onPress={() => { router.back(); router.push('/paywall'); }} />
-              <TouchableOpacity onPress={() => router.back()} className="items-center mt-3">
-                <Text className="text-warmgrey text-sm">Maybe later</Text>
+              <TouchableOpacity onPress={() => router.back()} className="items-center mt-4 py-2">
+                <Text className="text-warmgrey text-base">Maybe later</Text>
               </TouchableOpacity>
             </>
           ) : (
@@ -110,9 +113,10 @@ export default function LessonScreen() {
           visible
           emoji="🎓"
           message="Lesson Complete!"
-          subMessage={`+${lesson.xpReward} XP`}
+          subMessage={`+${lesson.xpReward} XP earned`}
         />
         <View className="absolute bottom-12 left-5 right-5">
+          <Text className="text-warmgrey text-sm text-center mb-4">Great work! Keep going.</Text>
           <Button title="Continue" onPress={() => router.back()} />
         </View>
       </SafeAreaView>
@@ -121,30 +125,39 @@ export default function LessonScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-3">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <Text className="text-charcoal text-xl font-bold flex-1" numberOfLines={1}>
+        <Text className="text-charcoal text-lg font-bold flex-1" numberOfLines={1}>
           {lesson.title}
         </Text>
       </View>
 
       <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
+        {/* Lesson Title Hero */}
+        <View className="mt-2 mb-4">
+          <Text className="text-charcoal text-2xl font-bold">{lesson.title}</Text>
+        </View>
+
         {lesson.sections.map((section, index) => (
-          <View key={index} className="mb-4">
+          <View key={index} className="mb-5">
             {section.type === 'heading' && (
-              <Text className="text-charcoal text-lg font-bold mt-4 mb-2">{section.content}</Text>
+              <Text className="text-charcoal text-xl font-bold mt-4 mb-2">{section.content}</Text>
             )}
             {section.type === 'text' && (
               <Text className="text-charcoal text-base leading-7">{section.content}</Text>
             )}
             {section.type === 'exercise' && (
-              <View className="bg-amber-light rounded-2xl p-5 my-2">
-                <Text className="text-amber font-bold text-sm mb-2">
-                  {section.exerciseType === 'checklist' ? 'CHECKLIST' : 'EXERCISE'}
-                </Text>
-                <Text className="text-charcoal text-base font-semibold mb-3">{section.prompt}</Text>
+              <View className="bg-amber-light/50 rounded-2xl p-6 my-2 border border-amber-light">
+                <View className="flex-row items-center mb-3">
+                  <View className="bg-amber/20 rounded-full px-3 py-1">
+                    <Text className="text-amber font-bold text-xs tracking-wider">
+                      {section.exerciseType === 'checklist' ? 'CHECKLIST' : 'EXERCISE'}
+                    </Text>
+                  </View>
+                </View>
+                <Text className="text-charcoal text-base font-semibold mb-4">{section.prompt}</Text>
                 {section.exerciseType === 'checklist' && section.options ? (
                   <View>
                     {section.options.map((option, optIdx) => {
@@ -153,14 +166,16 @@ export default function LessonScreen() {
                         <TouchableOpacity
                           key={key}
                           onPress={() => setCheckedItems((prev) => ({ ...prev, [key]: !prev[key] }))}
-                          className="flex-row items-center bg-white rounded-xl px-4 py-3 mb-2"
+                          className={`flex-row items-center bg-white rounded-xl px-4 py-3.5 mb-2.5 border ${
+                            checkedItems[key] ? 'border-teal' : 'border-transparent'
+                          }`}
                         >
                           <Ionicons
                             name={checkedItems[key] ? 'checkbox' : 'square-outline'}
-                            size={22}
+                            size={24}
                             color={checkedItems[key] ? colors.secondary : colors.textTertiary}
                           />
-                          <Text className="text-charcoal text-base ml-3">{option}</Text>
+                          <Text className={`text-base ml-3 flex-1 ${checkedItems[key] ? 'text-charcoal font-medium' : 'text-charcoal'}`}>{option}</Text>
                         </TouchableOpacity>
                       );
                     })}
@@ -171,7 +186,7 @@ export default function LessonScreen() {
                     onChangeText={(text) => setExerciseAnswers((prev) => ({ ...prev, [index]: text }))}
                     placeholder="Type your answer..."
                     multiline
-                    className="bg-white rounded-xl px-4 py-3 text-base text-charcoal min-h-[80px]"
+                    className="bg-white rounded-xl px-4 py-4 text-base text-charcoal min-h-[100px] border border-white"
                     placeholderTextColor="#BDC3C7"
                     textAlignVertical="top"
                     keyboardType={section.inputType === 'number' ? 'decimal-pad' : 'default'}
@@ -180,20 +195,23 @@ export default function LessonScreen() {
               </View>
             )}
             {section.type === 'takeaway' && (
-              <View className="bg-teal/10 rounded-2xl p-5 my-2 border-l-4 border-l-teal">
-                <Text className="text-teal font-bold text-sm mb-1">KEY TAKEAWAY</Text>
-                <Text className="text-charcoal text-base font-semibold">{section.content}</Text>
+              <View className="bg-teal/10 rounded-2xl p-6 my-2 border-l-4 border-l-teal">
+                <View className="flex-row items-center mb-2">
+                  <Ionicons name="bulb" size={18} color={colors.secondary} />
+                  <Text className="text-teal font-bold text-xs tracking-wider ml-2">KEY TAKEAWAY</Text>
+                </View>
+                <Text className="text-charcoal text-base font-semibold leading-6">{section.content}</Text>
               </View>
             )}
             {section.type === 'encouragement' && (
-              <View className="bg-coral-light/30 rounded-2xl p-5 my-2">
-                <Text className="text-coral text-base font-semibold">{section.content}</Text>
+              <View className="bg-coral-light/40 rounded-2xl p-6 my-2 items-center">
+                <Text className="text-coral text-base font-semibold text-center leading-6">{section.content}</Text>
               </View>
             )}
           </View>
         ))}
 
-        <View className="my-6">
+        <View className="my-8">
           <Button title="Complete Lesson" onPress={handleComplete} />
         </View>
         <View className="h-8" />

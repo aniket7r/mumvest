@@ -29,12 +29,12 @@ export function Button({
   };
 
   const baseClass = 'items-center justify-center rounded-2xl';
-  const sizeClass = size === 'sm' ? 'py-2 px-4' : size === 'lg' ? 'py-4 px-8' : 'py-3.5 px-6';
+  const sizeClass = size === 'sm' ? 'py-2.5 px-5' : size === 'lg' ? 'py-4.5 px-10' : 'py-3.5 px-6';
   const widthClass = fullWidth ? 'w-full' : '';
 
   const variantClass = {
-    primary: 'bg-coral',
-    secondary: 'bg-teal',
+    primary: 'bg-coral shadow-sm',
+    secondary: 'bg-teal shadow-sm',
     outline: 'border-2 border-coral bg-transparent',
     ghost: 'bg-transparent',
   }[variant];
@@ -53,12 +53,12 @@ export function Button({
       onPress={handlePress}
       disabled={disabled || loading}
       className={`${baseClass} ${sizeClass} ${widthClass} ${variantClass} ${disabled ? 'opacity-50' : ''} ${className}`}
-      activeOpacity={0.8}
+      activeOpacity={0.75}
     >
       {loading ? (
         <ActivityIndicator color={variant === 'outline' || variant === 'ghost' ? colors.primary : '#fff'} />
       ) : (
-        <Text className={`font-body-semi ${textSize} ${textClass}`}>{title}</Text>
+        <Text className={`font-body-bold ${textSize} ${textClass}`}>{title}</Text>
       )}
     </TouchableOpacity>
   );

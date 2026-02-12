@@ -13,9 +13,9 @@ interface ProgressBarProps {
 
 export function ProgressBar({
   progress,
-  height = 8,
+  height = 10,
   color = colors.primary,
-  backgroundColor = colors.border,
+  backgroundColor = '#F0ECE8',
   showLabel = false,
   className = '',
 }: ProgressBarProps) {
@@ -24,7 +24,7 @@ export function ProgressBar({
   return (
     <View className={className}>
       <View
-        style={{ height, backgroundColor, borderRadius: height / 2, overflow: 'hidden' }}
+        style={{ height, backgroundColor, borderRadius: 999, overflow: 'hidden' }}
       >
         <MotiView
           from={{ width: '0%' }}
@@ -33,12 +33,12 @@ export function ProgressBar({
           style={{
             height: '100%',
             backgroundColor: color,
-            borderRadius: height / 2,
+            borderRadius: 999,
           }}
         />
       </View>
       {showLabel && (
-        <Text className="text-warmgrey text-xs mt-1 text-right">
+        <Text className="text-warmgrey text-xs mt-1.5 text-right font-body-medium">
           {Math.round(clampedProgress)}%
         </Text>
       )}

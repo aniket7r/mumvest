@@ -55,11 +55,11 @@ export default function SmartSwapScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-3">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <Text className="text-charcoal text-xl font-bold">Smart Swaps</Text>
+        <Text className="text-charcoal text-2xl font-bold">Smart Swaps</Text>
       </View>
 
       {/* Category Filter */}
@@ -68,8 +68,8 @@ export default function SmartSwapScreen() {
           <TouchableOpacity
             key={cat.id}
             onPress={() => setActiveCategory(cat.id)}
-            className={`rounded-full px-4 py-2 mr-2 ${
-              activeCategory === cat.id ? 'bg-coral' : 'bg-white'
+            className={`rounded-full px-5 py-2.5 mr-2.5 ${
+              activeCategory === cat.id ? 'bg-coral' : 'bg-white border border-border'
             }`}
           >
             <Text className={`text-sm font-semibold ${
@@ -92,35 +92,41 @@ export default function SmartSwapScreen() {
           </View>
         )}
         {filteredSwaps.map((swap) => (
-          <Card key={swap.id} className="mb-3">
-            <View className="flex-row items-center mb-1">
+          <Card key={swap.id} className="mb-4">
+            <View className="flex-row items-center mb-2 flex-wrap gap-1.5">
+              <View className="bg-coral-light rounded-full px-3 py-1">
+                <Text className="text-coral text-xs font-semibold capitalize">{swap.category}</Text>
+              </View>
               {swap.isRebeccaPick && (
-                <View className="bg-amber-light rounded-full px-2 py-0.5 mr-2">
+                <View className="bg-amber-light rounded-full px-3 py-1">
                   <Text className="text-amber text-xs font-semibold">Rebecca's Pick</Text>
                 </View>
               )}
-              <Text className="text-warmgrey text-xs capitalize">{swap.category}</Text>
             </View>
-            <Text className="text-charcoal text-base font-semibold mb-1">{swap.title}</Text>
-            <Text className="text-warmgrey text-sm mb-2">{swap.description}</Text>
-            <Text className="text-savings text-sm font-semibold">
-              Save ~{formatCurrency(swap.potentialMonthlySaving, currency)}/month
-            </Text>
-            <Text className="text-warmgrey text-xs mt-1">
+            <Text className="text-charcoal text-lg font-bold mb-1.5">{swap.title}</Text>
+            <Text className="text-warmgrey text-sm leading-5 mb-3">{swap.description}</Text>
+            <View className="bg-savings-light rounded-xl p-3 mb-3 flex-row items-center">
+              <Ionicons name="trending-down" size={18} color={colors.success} />
+              <Text className="text-savings text-base font-bold ml-2">
+                Save ~{formatCurrency(swap.potentialMonthlySaving, currency)}/month
+              </Text>
+            </View>
+            <Text className="text-warmgrey/60 text-xs mb-3">
               Adopted by {(1200 + parseInt(swap.id.replace('swap-', ''), 10) * 89).toLocaleString()} mums
             </Text>
-            <View className="flex-row mt-3 gap-3">
+            <View className="flex-row gap-3">
               <TouchableOpacity
                 onPress={() => handleAdoptSwap(swap.id)}
-                className="flex-1 bg-teal rounded-xl py-2.5 items-center"
+                className="flex-1 bg-teal rounded-xl py-3 items-center flex-row justify-center"
               >
-                <Text className="text-white text-sm font-semibold">I'll try this</Text>
+                <Ionicons name="checkmark-circle" size={18} color="white" />
+                <Text className="text-white text-sm font-bold ml-2">I'll try this</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => dismissSwap(swap.id)}
-                className="flex-1 border border-border rounded-xl py-2.5 items-center"
+                className="flex-1 border-2 border-border rounded-xl py-3 items-center"
               >
-                <Text className="text-warmgrey text-sm">Not for me</Text>
+                <Text className="text-warmgrey text-sm font-medium">Not for me</Text>
               </TouchableOpacity>
             </View>
           </Card>

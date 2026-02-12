@@ -117,17 +117,19 @@ export default function CreateGoalScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         {/* Header */}
-        <View className="flex-row items-center px-5 pt-4 pb-2">
-          <TouchableOpacity onPress={() => router.back()} className="mr-3">
-            <Ionicons name="close" size={28} color={colors.textPrimary} />
+        <View className="flex-row items-center px-5 pt-5 pb-3">
+          <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+            <Ionicons name="close" size={24} color={colors.textPrimary} />
           </TouchableOpacity>
           <Text className="text-charcoal text-xl font-bold flex-1">New Goal</Text>
-          <Text className="text-warmgrey text-sm">Step {step}/{totalSteps}</Text>
+          <View className="bg-coral-light rounded-full px-3 py-1">
+            <Text className="text-coral text-xs font-bold">Step {step}/{totalSteps}</Text>
+          </View>
         </View>
 
         {/* Progress bar */}
-        <View className="px-5 mb-2">
-          <View className="h-1 bg-border rounded-full overflow-hidden">
+        <View className="px-5 mb-4">
+          <View className="h-1.5 bg-border rounded-full overflow-hidden">
             <View
               className="h-full bg-coral rounded-full"
               style={{ width: `${(step / totalSteps) * 100}%` }}
@@ -151,21 +153,24 @@ export default function CreateGoalScreen() {
 
           {step === 1 && !goalLimitReached && (
             <View>
-              <Text className="text-charcoal text-lg font-semibold mb-4 mt-4">
+              <Text className="text-charcoal text-2xl font-bold mb-2 mt-4">
                 What are you saving for?
+              </Text>
+              <Text className="text-warmgrey text-sm mb-6">
+                Pick a goal type to get started
               </Text>
               <View className="flex-row flex-wrap justify-between">
                 {GOAL_PRESETS.map((preset) => (
                   <TouchableOpacity
                     key={preset.type}
                     onPress={() => handleSelectType(preset.type)}
-                    className={`w-[48%] bg-white rounded-2xl p-4 items-center mb-4 border-2 ${
+                    className={`w-[48%] bg-white rounded-2xl p-5 items-center mb-4 border-2 ${
                       selectedType === preset.type ? 'border-coral' : 'border-transparent'
                     }`}
                     activeOpacity={0.7}
                   >
-                    <Text className="text-3xl mb-2">{preset.emoji}</Text>
-                    <Text className="text-charcoal text-sm font-semibold text-center">
+                    <Text className="text-4xl mb-3">{preset.emoji}</Text>
+                    <Text className="text-charcoal text-sm font-bold text-center">
                       {preset.label}
                     </Text>
                   </TouchableOpacity>
@@ -176,34 +181,36 @@ export default function CreateGoalScreen() {
 
           {step === 2 && (
             <View>
-              <View className="items-center my-6">
-                <Text className="text-5xl mb-2">{emoji || '🎯'}</Text>
+              <View className="items-center my-8">
+                <View className="w-20 h-20 rounded-full bg-white items-center justify-center">
+                  <Text className="text-5xl">{emoji || '🎯'}</Text>
+                </View>
               </View>
 
-              <Text className="text-charcoal text-base font-semibold mb-2">Goal name</Text>
+              <Text className="text-charcoal text-base font-bold mb-2">Goal name</Text>
               <TextInput
                 value={name}
                 onChangeText={setName}
                 placeholder="e.g., Family Holiday to Spain"
-                className="bg-white rounded-xl px-4 py-3.5 text-base text-charcoal border border-border mb-6"
+                className="bg-white rounded-2xl px-5 py-4 text-base text-charcoal border border-border mb-6"
                 placeholderTextColor="#BDC3C7"
               />
 
-              <Text className="text-charcoal text-base font-semibold mb-2">How much do you need?</Text>
-              <View className="flex-row items-center bg-white rounded-xl border border-border px-4 mb-6">
-                <Text className="text-charcoal text-xl font-bold mr-2">{getCurrencySymbol(currency)}</Text>
+              <Text className="text-charcoal text-base font-bold mb-2">How much do you need?</Text>
+              <View className="flex-row items-center bg-white rounded-2xl border border-border px-5 mb-6">
+                <Text className="text-charcoal text-2xl font-bold mr-2">{getCurrencySymbol(currency)}</Text>
                 <TextInput
                   value={targetAmount}
                   onChangeText={setTargetAmount}
                   placeholder="0.00"
                   keyboardType="decimal-pad"
-                  className="flex-1 py-3.5 text-xl text-charcoal font-bold"
+                  className="flex-1 py-4 text-2xl text-charcoal font-bold"
                   placeholderTextColor="#BDC3C7"
                 />
               </View>
 
-              <Text className="text-charcoal text-base font-semibold mb-2">By when? (optional)</Text>
-              <View className="flex-row flex-wrap gap-2 mb-6">
+              <Text className="text-charcoal text-base font-bold mb-3">By when? (optional)</Text>
+              <View className="flex-row flex-wrap gap-2.5 mb-6">
                 {[
                   { value: '3', label: '3 months' },
                   { value: '6', label: '6 months' },
@@ -213,19 +220,20 @@ export default function CreateGoalScreen() {
                   <TouchableOpacity
                     key={option.value}
                     onPress={() => setTargetMonths(targetMonths === option.value ? '' : option.value)}
-                    className={`bg-white rounded-full px-4 py-2.5 border ${
-                      targetMonths === option.value ? 'border-coral' : 'border-border'
+                    className={`bg-white rounded-full px-5 py-3 border-2 ${
+                      targetMonths === option.value ? 'border-coral bg-coral-light' : 'border-border'
                     }`}
                   >
-                    <Text className={`text-sm font-semibold ${
+                    <Text className={`text-sm font-bold ${
                       targetMonths === option.value ? 'text-coral' : 'text-charcoal'
                     }`}>{option.label}</Text>
                   </TouchableOpacity>
                 ))}
               </View>
               {targetMonths && targetAmount && parseFloat(targetAmount) > 0 && (
-                <View className="bg-savings-light rounded-xl px-4 py-3 mb-6">
-                  <Text className="text-savings text-sm font-semibold">
+                <View className="bg-savings-light rounded-2xl px-5 py-4 mb-6 flex-row items-center">
+                  <Ionicons name="calculator-outline" size={20} color={colors.success} />
+                  <Text className="text-savings text-sm font-bold ml-3">
                     That's about {getCurrencySymbol(currency)}{(parseFloat(targetAmount) / parseInt(targetMonths, 10)).toFixed(0)}/month to hit your goal
                   </Text>
                 </View>
@@ -235,10 +243,12 @@ export default function CreateGoalScreen() {
 
           {step === 3 && (
             <View>
-              <View className="items-center my-6">
-                <Text className="text-4xl mb-2">🔔</Text>
-                <Text className="text-charcoal text-lg font-semibold">Saving reminders</Text>
-                <Text className="text-warmgrey text-sm mt-1 text-center">
+              <View className="items-center my-8">
+                <View className="w-16 h-16 rounded-full bg-amber-light items-center justify-center mb-3">
+                  <Text className="text-3xl">🔔</Text>
+                </View>
+                <Text className="text-charcoal text-xl font-bold">Saving reminders</Text>
+                <Text className="text-warmgrey text-sm mt-2 text-center px-4">
                   We'll gently nudge you to log your savings
                 </Text>
               </View>
@@ -247,20 +257,20 @@ export default function CreateGoalScreen() {
                 <TouchableOpacity
                   key={option.value}
                   onPress={() => setReminderFrequency(option.value)}
-                  className={`bg-white rounded-2xl p-4 mb-3 flex-row items-center border-2 ${
+                  className={`bg-white rounded-2xl p-5 mb-3 flex-row items-center border-2 ${
                     reminderFrequency === option.value ? 'border-coral' : 'border-transparent'
                   }`}
                 >
-                  <View className={`w-5 h-5 rounded-full border-2 mr-3 items-center justify-center ${
+                  <View className={`w-6 h-6 rounded-full border-2 mr-4 items-center justify-center ${
                     reminderFrequency === option.value ? 'border-coral' : 'border-border'
                   }`}>
                     {reminderFrequency === option.value && (
-                      <View className="w-3 h-3 rounded-full bg-coral" />
+                      <View className="w-3.5 h-3.5 rounded-full bg-coral" />
                     )}
                   </View>
                   <View className="flex-1">
-                    <Text className="text-charcoal text-base font-semibold">{option.label}</Text>
-                    <Text className="text-warmgrey text-xs">{option.description}</Text>
+                    <Text className="text-charcoal text-base font-bold">{option.label}</Text>
+                    <Text className="text-warmgrey text-sm mt-0.5">{option.description}</Text>
                   </View>
                 </TouchableOpacity>
               ))}

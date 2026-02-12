@@ -32,10 +32,10 @@ export const useGoalsStore = create<GoalsState>((set, get) => ({
   isLoading: true,
 
   loadGoals: async () => {
-    const goalsData = await db.select().from(schema.goals).where(eq(schema.goals.isArchived, false));
-    const entriesData = await db.select().from(schema.savingsEntries).orderBy(desc(schema.savingsEntries.createdAt));
+    const goalsData: any[] = await db.select().from(schema.goals).where(eq(schema.goals.isArchived, false));
+    const entriesData: any[] = await db.select().from(schema.savingsEntries).orderBy(desc(schema.savingsEntries.createdAt));
 
-    const mappedGoals: Goal[] = goalsData.map((g) => ({
+    const mappedGoals: Goal[] = goalsData.map((g: any) => ({
       id: g.id,
       name: g.name,
       emoji: g.emoji,
@@ -51,7 +51,7 @@ export const useGoalsStore = create<GoalsState>((set, get) => ({
       updatedAt: g.updatedAt,
     }));
 
-    const mappedEntries: SavingsEntry[] = entriesData.map((e) => ({
+    const mappedEntries: SavingsEntry[] = entriesData.map((e: any) => ({
       id: e.id,
       goalId: e.goalId,
       amount: e.amount,

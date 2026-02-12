@@ -60,13 +60,13 @@ export const useContentStore = create<ContentState>((set, get) => ({
 
   initialize: async () => {
     // Load read moments
-    const momentStates = await db.select().from(schema.moneyMomentState);
-    const readIds = new Set(momentStates.filter((m) => m.isRead).map((m) => m.momentId));
-    const savedIds = new Set(momentStates.filter((m) => m.isSaved).map((m) => m.momentId));
+    const momentStates: any[] = await db.select().from(schema.moneyMomentState);
+    const readIds = new Set<string>(momentStates.filter((m: any) => m.isRead).map((m: any) => m.momentId));
+    const savedIds = new Set<string>(momentStates.filter((m: any) => m.isSaved).map((m: any) => m.momentId));
 
     // Load adopted swaps
-    const swapStates = await db.select().from(schema.smartSwapState);
-    const adoptedIds = new Set(swapStates.filter((s) => s.isAdopted).map((s) => s.swapId));
+    const swapStates: any[] = await db.select().from(schema.smartSwapState);
+    const adoptedIds = new Set<string>(swapStates.filter((s: any) => s.isAdopted).map((s: any) => s.swapId));
 
     // Calculate today's & yesterday's moment
     const startDate = mmkv.getString(KEYS.CONTENT_MOMENT_START);
@@ -88,8 +88,8 @@ export const useContentStore = create<ContentState>((set, get) => ({
     // Load active challenge
     let activeChallenge: ActiveChallenge | null = null;
     try {
-      const challengeRows = await db.select().from(schema.challengeState);
-      const active = challengeRows.find((r) => r.status === 'active');
+      const challengeRows: any[] = await db.select().from(schema.challengeState);
+      const active = challengeRows.find((r: any) => r.status === 'active');
       if (active) {
         activeChallenge = {
           id: active.id,

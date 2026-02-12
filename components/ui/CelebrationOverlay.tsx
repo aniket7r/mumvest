@@ -91,28 +91,32 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 100,
+    backgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
   particle: {
     position: 'absolute',
   },
   center: {
     alignItems: 'center',
+    paddingHorizontal: 32,
   },
   emoji: {
-    fontSize: 64,
-    marginBottom: 8,
+    fontSize: 80,
+    marginBottom: 16,
   },
   message: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
     color: '#2C3E50',
     textAlign: 'center',
+    lineHeight: 34,
   },
   subMessage: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: '#FF6B6B',
     textAlign: 'center',
-    marginTop: 4,
+    marginTop: 10,
+    lineHeight: 24,
   },
 });

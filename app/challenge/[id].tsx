@@ -92,33 +92,36 @@ export default function ChallengeDetailScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-3">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
         <Text className="text-charcoal text-xl font-bold flex-1">{challenge.name}</Text>
       </View>
 
       <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
         <Card className="mt-4">
-          <Text className="text-charcoal text-base mb-4">{challenge.description}</Text>
+          <Text className="text-charcoal text-base leading-6 mb-5">{challenge.description}</Text>
 
-          <View className="flex-row justify-between mb-4">
-            <View className="items-center">
-              <Text className="text-warmgrey text-xs">Duration</Text>
-              <Text className="text-charcoal font-bold">{challenge.durationHours}h</Text>
+          <View className="flex-row justify-between mb-5 bg-cream rounded-2xl p-4">
+            <View className="flex-1 items-center">
+              <Ionicons name="time-outline" size={20} color={colors.textTertiary} />
+              <Text className="text-warmgrey text-xs mt-1">Duration</Text>
+              <Text className="text-charcoal text-base font-bold">{challenge.durationHours}h</Text>
             </View>
-            <View className="items-center">
-              <Text className="text-warmgrey text-xs">Check-ins</Text>
-              <Text className="text-charcoal font-bold">{challenge.checkInCount}</Text>
+            <View className="flex-1 items-center">
+              <Ionicons name="checkbox-outline" size={20} color={colors.textTertiary} />
+              <Text className="text-warmgrey text-xs mt-1">Check-ins</Text>
+              <Text className="text-charcoal text-base font-bold">{challenge.checkInCount}</Text>
             </View>
-            <View className="items-center">
-              <Text className="text-warmgrey text-xs">Est. Saving</Text>
-              <Text className="text-savings font-bold">{formatCurrency(challenge.estimatedSaving, currency)}</Text>
+            <View className="flex-1 items-center">
+              <Ionicons name="cash-outline" size={20} color={colors.success} />
+              <Text className="text-warmgrey text-xs mt-1">Est. Saving</Text>
+              <Text className="text-savings text-base font-bold">{formatCurrency(challenge.estimatedSaving, currency)}</Text>
             </View>
           </View>
 
-          <Text className="text-charcoal text-sm font-semibold mb-2">Check-in points:</Text>
+          <Text className="text-charcoal text-base font-bold mb-3">Check-in points:</Text>
           {challenge.checkInLabels.map((label, i) => {
             const isChecked = isThisChallengeActive && activeChallenge!.checkIns[i];
             const canCheck = isThisChallengeActive && !isChecked;
@@ -128,28 +131,31 @@ export default function ChallengeDetailScreen() {
                 key={i}
                 onPress={() => canCheck && handleCheckIn(i)}
                 disabled={!canCheck}
-                className="flex-row items-center mb-2"
+                className={`flex-row items-center mb-3 p-3 rounded-xl ${
+                  isChecked ? 'bg-savings-light' : canCheck ? 'bg-coral-light/30' : 'bg-white'
+                }`}
               >
-                <View className={`w-7 h-7 rounded-full items-center justify-center mr-3 ${
-                  isChecked ? 'bg-savings' : isThisChallengeActive ? 'bg-white border-2 border-coral' : 'border-2 border-border'
+                <View className={`w-8 h-8 rounded-full items-center justify-center mr-3 ${
+                  isChecked ? 'bg-savings' : isThisChallengeActive ? 'bg-white border-2 border-coral' : 'border-2 border-border bg-white'
                 }`}>
                   {isChecked ? (
-                    <Ionicons name="checkmark" size={16} color="white" />
+                    <Ionicons name="checkmark" size={18} color="white" />
                   ) : (
-                    <Text className="text-warmgrey text-xs">{i + 1}</Text>
+                    <Text className="text-warmgrey text-xs font-bold">{i + 1}</Text>
                   )}
                 </View>
-                <Text className={`text-sm flex-1 ${isChecked ? 'text-warmgrey line-through' : 'text-charcoal'}`}>
+                <Text className={`text-base flex-1 ${isChecked ? 'text-warmgrey line-through' : 'text-charcoal font-medium'}`}>
                   {label}
                 </Text>
+                {canCheck && <Ionicons name="radio-button-off" size={22} color={colors.primary} />}
               </TouchableOpacity>
             );
           })}
         </Card>
 
         {isThisChallengeActive && (
-          <TouchableOpacity onPress={handleAbandon} className="items-center mt-4 mb-4">
-            <Text className="text-warmgrey text-sm">Abandon challenge</Text>
+          <TouchableOpacity onPress={handleAbandon} className="items-center mt-5 mb-4 py-2">
+            <Text className="text-warmgrey text-sm font-medium">Abandon challenge</Text>
           </TouchableOpacity>
         )}
         <View className="h-8" />

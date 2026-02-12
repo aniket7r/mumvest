@@ -56,27 +56,27 @@ export default function MoneyMomentArchiveScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-3">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <Text className="text-charcoal text-xl font-bold">All Money Moments</Text>
+        <Text className="text-charcoal text-2xl font-bold">All Money Moments</Text>
       </View>
 
       {/* Search Bar */}
       <View className="px-5 pt-2 pb-1">
-        <View className="bg-white rounded-xl flex-row items-center px-3 border border-border">
-          <Ionicons name="search" size={18} color={colors.textTertiary} />
+        <View className="bg-white rounded-2xl flex-row items-center px-4 border border-border">
+          <Ionicons name="search" size={20} color={colors.textTertiary} />
           <TextInput
             value={searchQuery}
             onChangeText={setSearchQuery}
             placeholder="Search tips..."
-            className="flex-1 py-2.5 px-2 text-sm text-charcoal"
+            className="flex-1 py-3 px-3 text-base text-charcoal"
             placeholderTextColor="#BDC3C7"
           />
           {searchQuery.length > 0 && (
             <TouchableOpacity onPress={() => setSearchQuery('')}>
-              <Ionicons name="close-circle" size={18} color={colors.textTertiary} />
+              <Ionicons name="close-circle" size={20} color={colors.textTertiary} />
             </TouchableOpacity>
           )}
         </View>
@@ -88,16 +88,16 @@ export default function MoneyMomentArchiveScreen() {
           <TouchableOpacity
             key={cat.id}
             onPress={() => setActiveCategory(cat.id)}
-            className={`rounded-full px-4 py-2 mr-2 flex-row items-center ${
-              activeCategory === cat.id ? 'bg-coral' : 'bg-white'
+            className={`rounded-full px-5 py-2.5 mr-2.5 flex-row items-center ${
+              activeCategory === cat.id ? 'bg-coral' : 'bg-white border border-border'
             }`}
           >
             {cat.id === 'saved' && (
               <Ionicons
                 name="bookmark"
-                size={12}
+                size={13}
                 color={activeCategory === 'saved' ? 'white' : colors.accent}
-                style={{ marginRight: 4 }}
+                style={{ marginRight: 6 }}
               />
             )}
             <Text className={`text-sm font-semibold ${
@@ -147,33 +147,43 @@ export default function MoneyMomentArchiveScreen() {
             <Card
               key={moment.id}
               onPress={() => router.push(`/money-moment/${moment.id}`)}
-              className={`mb-3 ${isRead ? 'opacity-70' : ''}`}
+              className={`mb-3 ${isRead ? 'opacity-60' : ''}`}
             >
               <View className="flex-row items-start">
-                <Text className="text-xl mr-3">💡</Text>
+                <View className={`w-10 h-10 rounded-full items-center justify-center mr-3 ${isRead ? 'bg-savings-light' : 'bg-coral-light'}`}>
+                  {isRead ? (
+                    <Ionicons name="checkmark" size={20} color={colors.success} />
+                  ) : (
+                    <Text className="text-lg">💡</Text>
+                  )}
+                </View>
                 <View className="flex-1">
-                  <View className="flex-row items-center mb-1">
-                    <View className="bg-coral-light rounded-full px-2 py-0.5 mr-2">
+                  <View className="flex-row items-center mb-1.5 flex-wrap gap-1.5">
+                    <View className="bg-coral-light rounded-full px-3 py-1">
                       <Text className="text-coral text-xs font-semibold capitalize">{moment.category}</Text>
                     </View>
                     {moment.isRebeccaPick && (
-                      <View className="bg-amber-light rounded-full px-2 py-0.5">
+                      <View className="bg-amber-light rounded-full px-3 py-1">
                         <Text className="text-amber text-xs font-semibold">Rebecca's Pick</Text>
                       </View>
                     )}
                   </View>
-                  <Text className="text-charcoal text-base font-semibold">{moment.title}</Text>
-                  <Text className="text-warmgrey text-sm" numberOfLines={1}>{moment.summary}</Text>
+                  <Text className="text-charcoal text-base font-bold mb-0.5">{moment.title}</Text>
+                  <Text className="text-warmgrey text-sm leading-5" numberOfLines={2}>{moment.summary}</Text>
                   {moment.potentialMonthlySaving > 0 && (
-                    <Text className="text-savings text-xs font-semibold mt-1">
-                      Save {formatCurrency(moment.potentialMonthlySaving, currency)}/mo
-                    </Text>
+                    <View className="flex-row items-center mt-2">
+                      <Ionicons name="trending-down" size={14} color={colors.success} />
+                      <Text className="text-savings text-xs font-bold ml-1">
+                        Save {formatCurrency(moment.potentialMonthlySaving, currency)}/mo
+                      </Text>
+                    </View>
                   )}
                 </View>
-                <View className="items-center">
-                  {isSaved && <Ionicons name="bookmark" size={16} color={colors.accent} />}
-                  {isRead && <Ionicons name="checkmark-circle" size={20} color={colors.success} />}
-                </View>
+                {isSaved && (
+                  <View className="ml-2">
+                    <Ionicons name="bookmark" size={18} color={colors.accent} />
+                  </View>
+                )}
               </View>
             </Card>
           );

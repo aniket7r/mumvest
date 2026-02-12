@@ -17,8 +17,8 @@ export async function checkBadges(): Promise<string | null> {
   // Count completed lessons
   let completedLessons = 0;
   try {
-    const rows = await db.select().from(schema.lessonProgress);
-    completedLessons = rows.filter((r) => r.isCompleted).length;
+    const rows: any[] = await db.select().from(schema.lessonProgress);
+    completedLessons = rows.filter((r: any) => r.isCompleted).length;
   } catch {
     // DB not ready
   }

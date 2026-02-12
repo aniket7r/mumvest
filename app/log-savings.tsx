@@ -88,11 +88,11 @@ export default function LogSavingsScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         {/* Header */}
-        <View className="flex-row items-center px-5 pt-4 pb-2">
-          <TouchableOpacity onPress={() => router.back()} className="mr-3">
-            <Ionicons name="close" size={28} color={colors.textPrimary} />
+        <View className="flex-row items-center px-5 pt-5 pb-3">
+          <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+            <Ionicons name="close" size={24} color={colors.textPrimary} />
           </TouchableOpacity>
-          <Text className="text-charcoal text-xl font-bold">Log Savings</Text>
+          <Text className="text-charcoal text-2xl font-bold">Log Savings</Text>
         </View>
 
         <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
@@ -110,18 +110,18 @@ export default function LogSavingsScreen() {
           {goals.length > 0 && (
             <>
           {/* Goal Selector */}
-          <Text className="text-charcoal text-base font-semibold mt-4 mb-3">Which goal?</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mb-6">
+          <Text className="text-charcoal text-base font-bold mt-6 mb-3">Which goal?</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mb-8">
             {goals.map((goal) => (
               <TouchableOpacity
                 key={goal.id}
                 onPress={() => setSelectedGoalId(goal.id)}
-                className={`mr-3 bg-white rounded-xl px-4 py-3 items-center border-2 ${
+                className={`mr-3 bg-white rounded-2xl px-5 py-4 items-center border-2 min-w-[90px] ${
                   selectedGoalId === goal.id ? 'border-coral' : 'border-transparent'
                 }`}
               >
-                <Text className="text-xl mb-1">{goal.emoji}</Text>
-                <Text className="text-charcoal text-xs font-semibold" numberOfLines={1}>
+                <Text className="text-2xl mb-1.5">{goal.emoji}</Text>
+                <Text className={`text-xs font-bold ${selectedGoalId === goal.id ? 'text-coral' : 'text-charcoal'}`} numberOfLines={1}>
                   {goal.name}
                 </Text>
               </TouchableOpacity>
@@ -129,34 +129,34 @@ export default function LogSavingsScreen() {
           </ScrollView>
 
           {/* Amount */}
-          <Text className="text-charcoal text-base font-semibold mb-2">How much?</Text>
-          <View className="flex-row items-center bg-white rounded-xl border border-border px-4 mb-6">
-            <Text className="text-charcoal text-2xl font-bold mr-2">{getCurrencySymbol(currency)}</Text>
+          <Text className="text-charcoal text-base font-bold mb-3">How much?</Text>
+          <View className="flex-row items-center bg-white rounded-2xl border border-border px-5 mb-8">
+            <Text className="text-charcoal text-3xl font-bold mr-2">{getCurrencySymbol(currency)}</Text>
             <TextInput
               value={amount}
               onChangeText={setAmount}
               placeholder="0.00"
               keyboardType="decimal-pad"
-              className="flex-1 py-4 text-2xl text-charcoal font-bold"
+              className="flex-1 py-5 text-3xl text-charcoal font-bold"
               placeholderTextColor="#BDC3C7"
               autoFocus
             />
           </View>
 
           {/* Method */}
-          <Text className="text-charcoal text-base font-semibold mb-3">How did you save? (optional)</Text>
-          <View className="flex-row flex-wrap gap-2 mb-6">
+          <Text className="text-charcoal text-base font-bold mb-3">How did you save? (optional)</Text>
+          <View className="flex-row flex-wrap gap-2.5 mb-8">
             {SAVINGS_METHODS.map((method) => (
               <TouchableOpacity
                 key={method.id}
                 onPress={() => setSelectedMethod(selectedMethod === method.id ? null : method.id)}
-                className={`bg-white rounded-full px-3 py-2 flex-row items-center border ${
-                  selectedMethod === method.id ? 'border-coral' : 'border-border'
+                className={`bg-white rounded-full px-4 py-2.5 flex-row items-center border-2 ${
+                  selectedMethod === method.id ? 'border-coral bg-coral-light' : 'border-border'
                 }`}
               >
-                <Text className="mr-1">{method.emoji}</Text>
+                <Text className="mr-1.5 text-base">{method.emoji}</Text>
                 <Text className={`text-sm ${
-                  selectedMethod === method.id ? 'text-coral font-semibold' : 'text-charcoal'
+                  selectedMethod === method.id ? 'text-coral font-bold' : 'text-charcoal font-medium'
                 }`}>
                   {method.label}
                 </Text>
@@ -165,12 +165,12 @@ export default function LogSavingsScreen() {
           </View>
 
           {/* Note */}
-          <Text className="text-charcoal text-base font-semibold mb-2">Note (optional)</Text>
+          <Text className="text-charcoal text-base font-bold mb-2">Note (optional)</Text>
           <TextInput
             value={note}
             onChangeText={setNote}
             placeholder="What did you save on?"
-            className="bg-white rounded-xl px-4 py-3 text-base text-charcoal border border-border mb-6"
+            className="bg-white rounded-2xl px-5 py-4 text-base text-charcoal border border-border mb-6"
             placeholderTextColor="#BDC3C7"
           />
             </>

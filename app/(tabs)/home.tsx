@@ -48,17 +48,17 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
-      <ScrollView className="flex-1" contentContainerClassName="pb-6" showsVerticalScrollIndicator={false}>
+      <ScrollView className="flex-1" contentContainerClassName="pb-8" showsVerticalScrollIndicator={false}>
         {/* Greeting Header */}
-        <View className="px-5 pt-4 pb-2">
+        <View className="px-5 pt-5 pb-3">
           <View className="flex-row items-center justify-between">
             <View>
-              <Text className="text-warmgrey text-sm">{getGreeting()}</Text>
-              <Text className="text-charcoal text-2xl font-bold">{name || 'Friend'}</Text>
+              <Text className="text-warmgrey text-sm font-body-medium tracking-wide">{getGreeting()}</Text>
+              <Text className="text-charcoal text-3xl font-bold font-heading">{name || 'Friend'}</Text>
             </View>
-            <View className="flex-row items-center bg-white rounded-full px-3 py-1.5">
-              <Text className="text-base mr-1">🔥</Text>
-              <Text className="text-charcoal font-semibold">{currentStreak}</Text>
+            <View className="flex-row items-center bg-white rounded-full px-4 py-2 border border-border shadow-card">
+              <Text className="text-lg mr-1.5">🔥</Text>
+              <Text className="text-charcoal text-base font-bold">{currentStreak}</Text>
               <Text className="text-warmgrey text-xs ml-1">day streak</Text>
             </View>
           </View>
@@ -66,16 +66,16 @@ export default function HomeScreen() {
 
         {/* Welcome Banner */}
         {showWelcome && (
-          <View className="px-5 mt-3">
-            <Card className="bg-coral-light border-l-4 border-l-coral">
+          <View className="px-5 mt-4">
+            <Card className="bg-coral-light border-l-4 border-l-coral p-6">
               <View className="flex-row items-start">
                 <View className="flex-1">
-                  <Text className="text-charcoal text-base font-bold mb-1">Welcome to MumVest! 🎉</Text>
-                  <Text className="text-warmgrey text-sm">
+                  <Text className="text-charcoal text-lg font-bold font-heading mb-1.5">Welcome to MumVest! 🎉</Text>
+                  <Text className="text-warmgrey text-sm leading-5">
                     Small steps lead to big confidence. Start by setting a goal, reading today's money moment, or trying a smart swap.
                   </Text>
                 </View>
-                <TouchableOpacity onPress={() => setShowWelcome(false)} className="ml-2">
+                <TouchableOpacity onPress={() => setShowWelcome(false)} className="ml-3 p-1">
                   <Ionicons name="close" size={20} color={colors.textTertiary} />
                 </TouchableOpacity>
               </View>
@@ -85,13 +85,13 @@ export default function HomeScreen() {
 
         {/* Streak Broken Encouragement */}
         {streakBroken && !showWelcome && (
-          <View className="px-5 mt-3">
-            <Card className="bg-amber-light border-l-4 border-l-amber">
+          <View className="px-5 mt-4">
+            <Card className="bg-amber-light border-l-4 border-l-amber p-6">
               <View className="flex-row items-start">
-                <Text className="text-2xl mr-3">💪</Text>
+                <Text className="text-3xl mr-4">💪</Text>
                 <View className="flex-1">
-                  <Text className="text-charcoal text-base font-bold mb-1">Welcome Back!</Text>
-                  <Text className="text-warmgrey text-sm">
+                  <Text className="text-charcoal text-lg font-bold font-heading mb-1.5">Welcome Back!</Text>
+                  <Text className="text-warmgrey text-sm leading-5">
                     Every expert was once a beginner. Your best streak was {longestStreak} days — let's beat it! Start fresh today.
                   </Text>
                 </View>
@@ -102,27 +102,29 @@ export default function HomeScreen() {
 
         {/* Today's Money Moment */}
         {todaysMoment && (
-          <View className="px-5 mt-4">
+          <View className="px-5 mt-5">
             <Card
               onPress={() => router.push(`/money-moment/${todaysMoment.id}`)}
-              className={`border-l-4 ${isMomentRead ? 'border-l-teal' : 'border-l-coral'}`}
+              className={`border-l-4 p-6 ${isMomentRead ? 'border-l-teal bg-teal-light/30' : 'border-l-coral bg-coral-light/30'}`}
             >
               <View className="flex-row items-start">
-                <Text className="text-2xl mr-3">💡</Text>
+                <Text className="text-3xl mr-4">💡</Text>
                 <View className="flex-1">
-                  <Text className="text-xs text-coral font-semibold mb-1">
+                  <Text className="text-xs text-coral font-bold tracking-wider mb-1.5">
                     {isMomentRead ? '✓ READ' : "TODAY'S MONEY MOMENT"}
                   </Text>
-                  <Text className="text-charcoal text-base font-semibold mb-1">
+                  <Text className="text-charcoal text-lg font-bold font-heading mb-1.5">
                     {todaysMoment.title}
                   </Text>
-                  <Text className="text-warmgrey text-sm" numberOfLines={2}>
+                  <Text className="text-warmgrey text-sm leading-5" numberOfLines={2}>
                     {todaysMoment.summary}
                   </Text>
                   {todaysMoment.potentialMonthlySaving > 0 && (
-                    <Text className="text-savings text-xs font-semibold mt-2">
-                      Potential saving: {formatCurrency(todaysMoment.potentialMonthlySaving, currency)}/month
-                    </Text>
+                    <View className="flex-row items-center mt-3 bg-savings-light rounded-full px-3 py-1.5 self-start">
+                      <Text className="text-savings text-xs font-bold">
+                        Potential saving: {formatCurrency(todaysMoment.potentialMonthlySaving, currency)}/month
+                      </Text>
+                    </View>
                   )}
                 </View>
               </View>
@@ -132,15 +134,15 @@ export default function HomeScreen() {
 
         {/* Missed Yesterday */}
         {missedYesterday && !isMomentRead && (
-          <View className="px-5 mt-2">
+          <View className="px-5 mt-3">
             <TouchableOpacity
               onPress={() => router.push(`/money-moment/${yesterdaysMoment.id}`)}
-              className="bg-amber-light rounded-xl px-4 py-3 flex-row items-center"
+              className="bg-amber-light rounded-2xl px-5 py-3.5 flex-row items-center"
             >
-              <Text className="text-amber text-sm flex-1">
-                You missed yesterday's tip: <Text className="font-semibold">{yesterdaysMoment.title}</Text>
+              <Text className="text-amber text-sm flex-1 leading-5">
+                You missed yesterday's tip: <Text className="font-bold">{yesterdaysMoment.title}</Text>
               </Text>
-              <Text className="text-amber text-xs font-semibold">Catch up →</Text>
+              <Text className="text-amber text-xs font-bold ml-2">Catch up →</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -149,27 +151,27 @@ export default function HomeScreen() {
         {todaysMoment && (
           <TouchableOpacity
             onPress={() => router.push('/money-moment/archive')}
-            className="px-5 mt-2"
+            className="px-5 mt-3"
           >
-            <Text className="text-coral text-sm font-semibold">View all Money Moments →</Text>
+            <Text className="text-coral text-sm font-bold">View all Money Moments →</Text>
           </TouchableOpacity>
         )}
 
         {/* Goals Strip */}
-        <View className="mt-6">
-          <View className="flex-row items-center justify-between px-5 mb-3">
-            <Text className="text-charcoal text-lg font-bold">Your Goals</Text>
+        <View className="mt-8">
+          <View className="flex-row items-center justify-between px-5 mb-4">
+            <Text className="text-charcoal text-xl font-bold font-heading">Your Goals</Text>
             <TouchableOpacity onPress={() => router.push('/goal/create')} accessibilityLabel="Add new goal">
-              <Ionicons name="add-circle" size={28} color={colors.primary} />
+              <Ionicons name="add-circle" size={30} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
           {goals.length === 0 ? (
             <View className="px-5">
-              <Card onPress={() => router.push('/goal/create')} className="items-center py-8">
-                <Text className="text-4xl mb-2">🎯</Text>
-                <Text className="text-charcoal text-base font-semibold mb-1">Set Your First Goal</Text>
-                <Text className="text-warmgrey text-sm text-center">
+              <Card onPress={() => router.push('/goal/create')} className="items-center py-10">
+                <Text className="text-5xl mb-3">🎯</Text>
+                <Text className="text-charcoal text-lg font-bold font-heading mb-1.5">Set Your First Goal</Text>
+                <Text className="text-warmgrey text-sm text-center leading-5">
                   Start saving for something that matters to your family
                 </Text>
               </Card>
@@ -178,7 +180,7 @@ export default function HomeScreen() {
             <ScrollView
               horizontal
               showsHorizontalScrollIndicator={false}
-              contentContainerClassName="px-5 gap-3"
+              contentContainerClassName="px-5 gap-4"
             >
               {goals.map((goal) => {
                 const progress = getGoalProgress(goal.id);
@@ -186,19 +188,19 @@ export default function HomeScreen() {
                   <Card
                     key={goal.id}
                     onPress={() => router.push(`/goal/${goal.id}`)}
-                    className="w-44"
+                    className="w-52 p-5"
                   >
-                    <Text className="text-2xl mb-2">{goal.emoji}</Text>
-                    <Text className="text-charcoal text-sm font-semibold mb-1" numberOfLines={1}>
+                    <Text className="text-3xl mb-3">{goal.emoji}</Text>
+                    <Text className="text-charcoal text-base font-bold font-heading mb-1" numberOfLines={1}>
                       {goal.name}
                     </Text>
-                    <Text className="text-coral text-base font-bold">
+                    <Text className="text-coral text-lg font-bold">
                       {formatCurrency(progress.saved, currency)}
                     </Text>
-                    <Text className="text-warmgrey text-xs mb-2">
+                    <Text className="text-warmgrey text-xs mb-3">
                       of {formatCurrency(progress.target, currency)}
                     </Text>
-                    <ProgressBar progress={progress.percentage} />
+                    <ProgressBar progress={progress.percentage} height={6} />
                   </Card>
                 );
               })}
@@ -207,105 +209,106 @@ export default function HomeScreen() {
         </View>
 
         {/* Weekly Summary */}
-        <View className="px-5 mt-6">
-          <Card onPress={() => router.push('/savings-breakdown')}>
+        <View className="px-5 mt-8">
+          <Text className="text-charcoal text-xl font-bold font-heading mb-4">This Week</Text>
+          <Card onPress={() => router.push('/savings-breakdown')} className="p-6">
             <View className="flex-row items-center justify-between">
-              <View>
-                <Text className="text-warmgrey text-xs font-semibold mb-1">THIS WEEK</Text>
-                <Text className="text-charcoal text-2xl font-bold">
+              <View className="flex-1">
+                <Text className="text-warmgrey text-xs font-bold tracking-wider mb-1.5">TOTAL SAVED</Text>
+                <Text className="text-charcoal text-3xl font-bold font-heading">
                   {formatCurrency(weeklySummary.totalSaved, currency)}
                 </Text>
-                <Text className="text-warmgrey text-sm">
-                  {weeklySummary.entryCount} {weeklySummary.entryCount === 1 ? 'entry' : 'entries'}
+                <Text className="text-warmgrey text-sm mt-1">
+                  {weeklySummary.entryCount} {weeklySummary.entryCount === 1 ? 'entry' : 'entries'} this week
                 </Text>
               </View>
-              <View className="items-end">
+              <View className="items-end ml-4">
                 {weeklySummary.comparedToLastWeek > 0 && (
-                  <View className="flex-row items-center px-2 py-1 rounded-full bg-savings-light">
-                    <Ionicons name="arrow-up" size={12} color={colors.success} />
-                    <Text className="text-xs font-semibold ml-1 text-savings">
-                      {Math.round(weeklySummary.comparedToLastWeek)}% more!
+                  <View className="flex-row items-center px-3 py-1.5 rounded-full bg-savings-light mb-2">
+                    <Ionicons name="arrow-up" size={14} color={colors.success} />
+                    <Text className="text-sm font-bold ml-1 text-savings">
+                      {Math.round(weeklySummary.comparedToLastWeek)}%
                     </Text>
                   </View>
                 )}
                 {weeklySummary.comparedToLastWeek < 0 && (
-                  <Text className="text-warmgrey text-xs text-right max-w-[120px]">
+                  <Text className="text-warmgrey text-xs text-right max-w-[120px] mb-2">
                     Every dollar counts
                   </Text>
                 )}
-                <Ionicons name="chevron-forward" size={20} color={colors.textTertiary} />
+                <Ionicons name="chevron-forward" size={22} color={colors.textTertiary} />
               </View>
             </View>
           </Card>
         </View>
 
         {/* Active Challenge / Challenge CTA */}
-        <View className="px-5 mt-6">
+        <View className="px-5 mt-8">
           {activeChallengeInfo ? (
             <Card
               onPress={() => router.push(`/challenge/${activeChallengeInfo.id}`)}
-              className="border-l-4 border-l-amber"
+              className="border-l-4 border-l-amber p-6"
             >
               <View className="flex-row items-center">
                 <View className="flex-1">
-                  <Text className="text-amber text-xs font-semibold mb-1">ACTIVE CHALLENGE</Text>
-                  <Text className="text-charcoal text-base font-semibold">{activeChallengeInfo.name}</Text>
-                  <Text className="text-warmgrey text-sm">
+                  <Text className="text-amber text-xs font-bold tracking-wider mb-1.5">ACTIVE CHALLENGE</Text>
+                  <Text className="text-charcoal text-lg font-bold font-heading">{activeChallengeInfo.name}</Text>
+                  <Text className="text-warmgrey text-sm mt-1">
                     {checkedCount}/{activeChallengeInfo.checkInCount} check-ins done
                   </Text>
                 </View>
-                <Ionicons name="chevron-forward" size={20} color={colors.textTertiary} />
+                <Ionicons name="chevron-forward" size={22} color={colors.textTertiary} />
               </View>
             </Card>
           ) : (
-            <Card onPress={() => router.push('/challenge/')}>
+            <Card onPress={() => router.push('/challenge/')} className="p-6">
               <View className="flex-row items-center">
-                <Text className="text-2xl mr-3">🏋️</Text>
+                <Text className="text-3xl mr-4">🏋️</Text>
                 <View className="flex-1">
-                  <Text className="text-charcoal text-base font-semibold">Try a Challenge</Text>
-                  <Text className="text-warmgrey text-sm">Push yourself with fun money challenges</Text>
+                  <Text className="text-charcoal text-lg font-bold font-heading">Try a Challenge</Text>
+                  <Text className="text-warmgrey text-sm mt-0.5">Push yourself with fun money challenges</Text>
                 </View>
-                <Ionicons name="chevron-forward" size={20} color={colors.textTertiary} />
+                <Ionicons name="chevron-forward" size={22} color={colors.textTertiary} />
               </View>
             </Card>
           )}
         </View>
 
         {/* Quick Actions */}
-        <View className="px-5 mt-6">
-          <Text className="text-charcoal text-lg font-bold mb-3">Quick Actions</Text>
+        <View className="px-5 mt-8 mb-4">
+          <Text className="text-charcoal text-xl font-bold font-heading mb-4">Quick Actions</Text>
           <View className="flex-row gap-3">
             <TouchableOpacity
               onPress={() => router.push('/log-savings')}
-              className="flex-1 bg-coral rounded-2xl py-4 items-center"
+              className="flex-1 bg-coral rounded-3xl py-5 items-center shadow-card"
               activeOpacity={0.8}
               accessibilityLabel="Log savings"
               accessibilityRole="button"
             >
-              <Text className="text-2xl mb-1">💰</Text>
-              <Text className="text-white text-sm font-semibold">Log Savings</Text>
+              <Text className="text-3xl mb-2">💰</Text>
+              <Text className="text-white text-sm font-bold">Log Savings</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={() => router.push('/(tabs)/learn')}
-              className="flex-1 bg-teal rounded-2xl py-4 items-center"
+              className="flex-1 bg-teal rounded-3xl py-5 items-center shadow-card"
               activeOpacity={0.8}
               accessibilityLabel="Go to lessons"
               accessibilityRole="button"
             >
-              <Text className="text-2xl mb-1">📚</Text>
-              <Text className="text-white text-sm font-semibold">Learn</Text>
+              <Text className="text-3xl mb-2">📚</Text>
+              <Text className="text-white text-sm font-bold">Learn</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => router.push('/smart-swap/index')}
-              className="flex-1 bg-amber rounded-2xl py-4 items-center"
+              onPress={() => router.push('/smart-swap' as any)}
+              className="flex-1 bg-amber rounded-3xl py-5 items-center shadow-card"
               activeOpacity={0.8}
               accessibilityLabel="Browse smart swaps"
               accessibilityRole="button"
             >
-              <Text className="text-2xl mb-1">🔄</Text>
-              <Text className="text-white text-sm font-semibold">Swaps</Text>
+              <Text className="text-3xl mb-2">🔄</Text>
+              <Text className="text-white text-sm font-bold">Swaps</Text>
             </TouchableOpacity>
           </View>
         </View>

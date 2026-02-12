@@ -7,13 +7,13 @@ interface CardProps {
 }
 
 export function Card({ onPress, className = '', children }: CardProps) {
-  const baseClass = 'bg-white rounded-2xl p-4 shadow-sm';
+  const baseClass = 'bg-white rounded-3xl p-5 shadow-md border border-border';
 
   if (onPress) {
     return (
       <TouchableOpacity
         onPress={onPress}
-        activeOpacity={0.7}
+        activeOpacity={0.65}
         className={`${baseClass} ${className}`}
       >
         {children}

@@ -97,16 +97,16 @@ export default function MoneyMomentDetailScreen() {
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
       {/* Header */}
-      <View className="flex-row items-center px-5 pt-4 pb-2">
-        <TouchableOpacity onPress={() => router.back()} className="mr-3">
-          <Ionicons name="arrow-back" size={24} color={colors.textPrimary} />
+      <View className="flex-row items-center px-5 pt-5 pb-3">
+        <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-3">
+          <Ionicons name="arrow-back" size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <Text className="text-charcoal text-xl font-bold flex-1">Money Moment</Text>
-        <TouchableOpacity onPress={handleShare} className="mr-3">
-          <Ionicons name="share-outline" size={22} color={colors.textSecondary} />
+        <Text className="text-charcoal text-lg font-bold flex-1">Money Moment</Text>
+        <TouchableOpacity onPress={handleShare} className="w-10 h-10 rounded-full bg-white items-center justify-center mr-2">
+          <Ionicons name="share-outline" size={20} color={colors.textSecondary} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleBookmark}>
-          <Ionicons name={isSaved ? 'bookmark' : 'bookmark-outline'} size={24} color={isSaved ? colors.accent : colors.textSecondary} />
+        <TouchableOpacity onPress={handleBookmark} className="w-10 h-10 rounded-full bg-white items-center justify-center">
+          <Ionicons name={isSaved ? 'bookmark' : 'bookmark-outline'} size={22} color={isSaved ? colors.accent : colors.textSecondary} />
         </TouchableOpacity>
       </View>
 
@@ -116,82 +116,89 @@ export default function MoneyMomentDetailScreen() {
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ type: 'timing', duration: 400 }}
         >
-          {/* Social Proof */}
-          <View className="flex-row items-center mt-4 mb-2">
-            <Ionicons name="heart" size={12} color={colors.primary} />
-            <Text className="text-warmgrey text-xs ml-1">
-              {(8200 + parseInt(moment.id.replace('mm-', ''), 10) * 137).toLocaleString()} mums found this helpful
-            </Text>
-          </View>
-
           {/* Category + Reading Time */}
-          <View className="flex-row items-center mb-4">
-            <View className="bg-teal/10 rounded-full px-3 py-1 mr-2">
+          <View className="flex-row items-center mt-5 mb-4 flex-wrap gap-2">
+            <View className="bg-teal/15 rounded-full px-4 py-1.5">
               <Text className="text-teal text-xs font-bold">Day {dayNumber}</Text>
             </View>
-            <View className="bg-coral-light rounded-full px-3 py-1 mr-2">
+            <View className="bg-coral-light rounded-full px-4 py-1.5">
               <Text className="text-coral text-xs font-semibold capitalize">{moment.category}</Text>
             </View>
-            <Text className="text-warmgrey text-xs">{moment.readTimeSeconds}s read</Text>
+            <View className="bg-white rounded-full px-3 py-1.5">
+              <Text className="text-warmgrey text-xs">{moment.readTimeSeconds}s read</Text>
+            </View>
             {moment.isRebeccaPick && (
-              <View className="bg-amber-light rounded-full px-2 py-0.5 ml-auto">
+              <View className="bg-amber-light rounded-full px-4 py-1.5">
                 <Text className="text-amber text-xs font-semibold">Rebecca's Pick</Text>
               </View>
             )}
           </View>
 
           {/* Title */}
-          <Text className="text-charcoal text-2xl font-bold mb-2">{moment.title}</Text>
-          <Text className="text-warmgrey text-sm mb-6">{moment.summary}</Text>
+          <Text className="text-charcoal text-3xl font-bold mb-3">{moment.title}</Text>
+          <Text className="text-warmgrey text-base leading-6 mb-2">{moment.summary}</Text>
+
+          {/* Social Proof */}
+          <View className="flex-row items-center mb-6">
+            <Ionicons name="heart" size={12} color={colors.primary} />
+            <Text className="text-warmgrey/70 text-xs ml-1.5">
+              {(8200 + parseInt(moment.id.replace('mm-', ''), 10) * 137).toLocaleString()} mums found this helpful
+            </Text>
+          </View>
 
           {/* Body */}
-          <View className="bg-white rounded-2xl p-5 mb-6">
+          <View className="bg-white rounded-2xl p-6 mb-6">
             <Text className="text-charcoal text-base leading-7">{moment.body}</Text>
           </View>
 
           {/* Potential Saving */}
           {moment.potentialMonthlySaving > 0 && (
-            <View className="bg-savings-light rounded-2xl p-5 mb-6 items-center">
-              <Text className="text-savings text-xs font-semibold mb-1">POTENTIAL SAVING</Text>
-              <Text className="text-savings text-3xl font-bold">
+            <View className="bg-savings-light rounded-3xl p-6 mb-6 items-center">
+              <Text className="text-savings text-xs font-bold tracking-wider mb-2">POTENTIAL SAVING</Text>
+              <Text className="text-savings text-4xl font-bold mb-1">
                 {formatCurrency(moment.potentialMonthlySaving, currency)}
               </Text>
-              <Text className="text-savings text-sm">per month</Text>
-              <Text className="text-savings/60 text-xs mt-1">
-                That's {formatCurrency(moment.potentialMonthlySaving * 12, currency)} per year!
-              </Text>
+              <Text className="text-savings text-base font-medium">per month</Text>
+              <View className="bg-savings/10 rounded-full px-4 py-1.5 mt-3">
+                <Text className="text-savings text-sm font-semibold">
+                  That's {formatCurrency(moment.potentialMonthlySaving * 12, currency)} per year!
+                </Text>
+              </View>
             </View>
           )}
 
           {/* Was this helpful? */}
-          <View className="bg-white rounded-2xl p-5 mb-4">
-            <Text className="text-charcoal text-sm font-semibold mb-3 text-center">Was this helpful?</Text>
+          <View className="bg-white rounded-2xl p-6 mb-4">
+            <Text className="text-charcoal text-base font-semibold mb-4 text-center">Was this helpful?</Text>
             <View className="flex-row justify-center gap-4">
               <TouchableOpacity
                 onPress={() => handleHelpful(true)}
-                className={`flex-row items-center px-5 py-2.5 rounded-full border ${
-                  helpfulVote === true ? 'bg-savings-light border-savings' : 'border-border'
+                className={`flex-row items-center px-8 py-3.5 rounded-full border-2 ${
+                  helpfulVote === true ? 'bg-savings-light border-savings' : 'border-border bg-white'
                 }`}
               >
-                <Ionicons name="thumbs-up" size={18} color={helpfulVote === true ? colors.success : colors.textTertiary} />
-                <Text className={`ml-2 text-sm font-semibold ${helpfulVote === true ? 'text-savings' : 'text-warmgrey'}`}>Yes</Text>
+                <Ionicons name="thumbs-up" size={22} color={helpfulVote === true ? colors.success : colors.textTertiary} />
+                <Text className={`ml-2.5 text-base font-semibold ${helpfulVote === true ? 'text-savings' : 'text-warmgrey'}`}>Yes!</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => handleHelpful(false)}
-                className={`flex-row items-center px-5 py-2.5 rounded-full border ${
-                  helpfulVote === false ? 'bg-coral-light border-coral' : 'border-border'
+                className={`flex-row items-center px-8 py-3.5 rounded-full border-2 ${
+                  helpfulVote === false ? 'bg-coral-light border-coral' : 'border-border bg-white'
                 }`}
               >
-                <Ionicons name="thumbs-down" size={18} color={helpfulVote === false ? colors.primary : colors.textTertiary} />
-                <Text className={`ml-2 text-sm font-semibold ${helpfulVote === false ? 'text-coral' : 'text-warmgrey'}`}>Not really</Text>
+                <Ionicons name="thumbs-down" size={22} color={helpfulVote === false ? colors.primary : colors.textTertiary} />
+                <Text className={`ml-2.5 text-base font-semibold ${helpfulVote === false ? 'text-coral' : 'text-warmgrey'}`}>Not really</Text>
               </TouchableOpacity>
             </View>
           </View>
 
           {/* Action */}
-          <View className="bg-white rounded-2xl p-5 mb-8">
-            <Text className="text-charcoal text-base font-semibold mb-2">💡 Your action step</Text>
-            <Text className="text-warmgrey text-sm">
+          <View className="bg-amber-light/40 rounded-2xl p-6 mb-8 border border-amber-light">
+            <View className="flex-row items-center mb-2">
+              <Text className="text-xl mr-2">💡</Text>
+              <Text className="text-charcoal text-base font-bold">Your action step</Text>
+            </View>
+            <Text className="text-charcoal/80 text-sm leading-6">
               Try this tip today and log any savings you make. Every small step counts!
             </Text>
           </View>

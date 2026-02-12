@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MotiView } from 'moti';
@@ -84,86 +84,120 @@ export default function DailyMomentScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream">
-      <View className="flex-1 px-6 pt-8">
-        <MotiView
-          from={{ opacity: 0, translateY: -10 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400 }}
-        >
-          <Text className="text-warmgrey text-sm font-semibold mb-2">STEP 3 OF 3</Text>
-          <Text className="text-charcoal text-2xl font-bold mb-2">Daily Money Moments</Text>
-          <Text className="text-warmgrey text-base mb-8">
-            Get a quick money tip every day — just 60 seconds to build smarter habits.
-          </Text>
-        </MotiView>
-
-        <MotiView
-          from={{ opacity: 0, translateY: 20 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400, delay: 200 }}
-          className="bg-white rounded-2xl p-5 mb-6"
-        >
-          <View className="flex-row items-center mb-4">
-            <Text className="text-2xl mr-3">💡</Text>
-            <View className="flex-1">
-              <Text className="text-charcoal text-base font-semibold">The Freezer Batch Trick</Text>
-              <Text className="text-warmgrey text-sm">Save up to $120/month by cooking double...</Text>
-            </View>
-          </View>
-          <Text className="text-xs text-warmgrey">Preview of your daily Money Moment</Text>
-        </MotiView>
-
-        <MotiView
-          from={{ opacity: 0, translateY: 20 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400, delay: 400 }}
-        >
-          <View className="bg-coral-light rounded-xl px-4 py-3 mb-4">
-            <Text className="text-charcoal text-sm">
-              We'll send one gentle notification per day at your chosen time. You can change this anytime in settings.
+      <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 24 }} showsVerticalScrollIndicator={false}>
+        <View className="px-7 pt-10">
+          {/* Header */}
+          <MotiView
+            from={{ opacity: 0, translateY: -10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400 }}
+            className="mb-8"
+          >
+            <Text className="text-coral font-body-semi text-xs tracking-widest mb-3">STEP 3 OF 3</Text>
+            <Text className="text-charcoal font-heading text-3xl mb-2">Daily Money Moments</Text>
+            <Text className="text-warmgrey font-body text-base leading-7">
+              Get a quick money tip every day — just 60 seconds to build smarter habits.
             </Text>
-          </View>
+          </MotiView>
 
-          <Text className="text-charcoal text-base font-semibold mb-3">
-            When should we remind you?
-          </Text>
+          {/* Preview card */}
+          <MotiView
+            from={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400, delay: 200 }}
+            className="bg-white rounded-2xl p-5 mb-8 border border-border"
+          >
+            <View className="flex-row items-center mb-3">
+              <View className="w-10 h-10 rounded-xl bg-amber-light items-center justify-center mr-3">
+                <Text className="text-xl">💡</Text>
+              </View>
+              <View className="flex-1">
+                <Text className="text-charcoal font-body-semi text-base">The Freezer Batch Trick</Text>
+                <Text className="text-warmgrey font-body text-sm mt-0.5">Save up to $120/month by cooking double...</Text>
+              </View>
+            </View>
+            <View className="border-t border-border pt-3 mt-1">
+              <Text className="text-warmgrey/60 font-body text-xs text-center">
+                Preview of your daily Money Moment
+              </Text>
+            </View>
+          </MotiView>
 
-          {TIME_OPTIONS.map((option) => (
+          {/* Notification info + time selector */}
+          <MotiView
+            from={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400, delay: 400 }}
+          >
+            <View className="bg-coral-light/40 rounded-2xl px-5 py-4 mb-6 border border-coral/10">
+              <Text className="text-charcoal font-body text-sm leading-6">
+                We'll send one gentle notification per day at your chosen time. You can change this anytime in settings.
+              </Text>
+            </View>
+
+            <Text className="text-charcoal font-body-semi text-base mb-4">
+              When should we remind you?
+            </Text>
+
+            {TIME_OPTIONS.map((option) => {
+              const isSelected = selectedTime === option.id && notificationsEnabled;
+              return (
+                <TouchableOpacity
+                  key={option.id}
+                  onPress={() => {
+                    setSelectedTime(option.id);
+                    setNotificationsEnabled(true);
+                  }}
+                  className={`flex-row items-center rounded-2xl px-5 py-4 mb-3 border-2 ${
+                    isSelected
+                      ? 'bg-coral-light/30 border-coral'
+                      : 'bg-white border-border'
+                  }`}
+                  activeOpacity={0.7}
+                >
+                  <Text className={`font-body-semi text-base flex-1 ${isSelected ? 'text-coral-dark' : 'text-charcoal'}`}>
+                    {option.label}
+                  </Text>
+                  <Text className="text-warmgrey font-body text-sm">{option.description}</Text>
+                  <View
+                    className={`w-5 h-5 rounded-full items-center justify-center ml-3 ${
+                      isSelected ? 'bg-coral' : 'border-2 border-border'
+                    }`}
+                  >
+                    {isSelected && (
+                      <Text className="text-white text-xs">✓</Text>
+                    )}
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
+
             <TouchableOpacity
-              key={option.id}
-              onPress={() => {
-                setSelectedTime(option.id);
-                setNotificationsEnabled(true);
-              }}
-              className={`flex-row items-center bg-white rounded-xl px-4 py-3 mb-2 border ${
-                selectedTime === option.id && notificationsEnabled
-                  ? 'border-coral'
-                  : 'border-border'
+              onPress={() => setNotificationsEnabled(false)}
+              className={`flex-row items-center rounded-2xl px-5 py-4 mt-1 border-2 ${
+                !notificationsEnabled
+                  ? 'bg-charcoal/5 border-charcoal/20'
+                  : 'bg-white border-border'
               }`}
               activeOpacity={0.7}
             >
-              <Text className="text-charcoal text-base flex-1">{option.label}</Text>
-              <Text className="text-warmgrey text-sm">{option.description}</Text>
+              <Text className="text-warmgrey font-body text-base flex-1">Maybe later</Text>
+              {!notificationsEnabled && (
+                <View className="w-5 h-5 rounded-full bg-charcoal/30 items-center justify-center">
+                  <Text className="text-white text-xs">✓</Text>
+                </View>
+              )}
             </TouchableOpacity>
-          ))}
+          </MotiView>
+        </View>
+      </ScrollView>
 
-          <TouchableOpacity
-            onPress={() => setNotificationsEnabled(false)}
-            className={`flex-row items-center bg-white rounded-xl px-4 py-3 mt-2 border ${
-              !notificationsEnabled ? 'border-coral' : 'border-border'
-            }`}
-            activeOpacity={0.7}
-          >
-            <Text className="text-warmgrey text-base flex-1">Maybe later</Text>
-          </TouchableOpacity>
-        </MotiView>
-      </View>
-
-      <View className="px-6 pb-6">
+      <View className="px-7 pb-6 pt-3 bg-cream">
         <Button
           title="Start My Journey"
           onPress={handleFinish}
           loading={isLoading}
+          size="lg"
         />
       </View>
     </SafeAreaView>

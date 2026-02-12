@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MotiView } from 'moti';
@@ -30,66 +30,88 @@ export default function AboutYouScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-cream">
-      <View className="flex-1 px-6 pt-8">
-        <MotiView
-          from={{ opacity: 0, translateY: -10 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400 }}
-        >
-          <Text className="text-warmgrey text-sm font-semibold mb-2">STEP 1 OF 3</Text>
-          <Text className="text-charcoal text-2xl font-bold mb-2">About You</Text>
-          <Text className="text-warmgrey text-base mb-8">Let's personalize your experience</Text>
-        </MotiView>
+      <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 24 }} showsVerticalScrollIndicator={false}>
+        <View className="px-7 pt-10">
+          {/* Header */}
+          <MotiView
+            from={{ opacity: 0, translateY: -10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400 }}
+            className="mb-10"
+          >
+            <Text className="text-coral font-body-semi text-xs tracking-widest mb-3">STEP 1 OF 3</Text>
+            <Text className="text-charcoal font-heading text-3xl mb-2">About You</Text>
+            <Text className="text-warmgrey font-body text-base leading-6">
+              Let's personalize your experience
+            </Text>
+          </MotiView>
 
-        <MotiView
-          from={{ opacity: 0, translateY: 20 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400, delay: 200 }}
-        >
-          <Text className="text-charcoal text-base font-semibold mb-2">What should we call you?</Text>
-          <TextInput
-            value={name}
-            onChangeText={setName}
-            placeholder="Your first name"
-            className="bg-white rounded-xl px-4 py-3.5 text-base text-charcoal border border-border mb-8"
-            placeholderTextColor="#BDC3C7"
-            autoCapitalize="words"
-          />
-        </MotiView>
+          {/* Name input section */}
+          <MotiView
+            from={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400, delay: 200 }}
+            className="mb-10"
+          >
+            <Text className="text-charcoal font-body-semi text-base mb-3">
+              What should we call you?
+            </Text>
+            <TextInput
+              value={name}
+              onChangeText={setName}
+              placeholder="Your first name"
+              className="bg-white rounded-2xl px-5 py-4 text-base text-charcoal border-2 border-border font-body"
+              placeholderTextColor="#BDC3C7"
+              autoCapitalize="words"
+            />
+          </MotiView>
 
-        <MotiView
-          from={{ opacity: 0, translateY: 20 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 400, delay: 400 }}
-        >
-          <Text className="text-charcoal text-base font-semibold mb-3">Where are you on your money journey?</Text>
+          {/* Financial situation section */}
+          <MotiView
+            from={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: 'timing', duration: 400, delay: 400 }}
+          >
+            <Text className="text-charcoal font-body-semi text-base mb-4">
+              Where are you on your money journey?
+            </Text>
 
-          {SITUATIONS.map((item, index) => (
-            <TouchableOpacity
-              key={item.id}
-              onPress={() => setSituation(item.id)}
-              className={`flex-row items-center bg-white rounded-xl px-4 py-3.5 mb-3 border ${
-                situation === item.id ? 'border-coral' : 'border-border'
-              }`}
-              activeOpacity={0.7}
-            >
-              <Text className="text-2xl mr-3">{item.emoji}</Text>
-              <View className="flex-1">
-                <Text className="text-charcoal text-base font-semibold">{item.label}</Text>
-                <Text className="text-warmgrey text-sm">{item.description}</Text>
-              </View>
-              {situation === item.id && (
-                <View className="w-5 h-5 rounded-full bg-coral items-center justify-center">
-                  <Text className="text-white text-xs">✓</Text>
-                </View>
-              )}
-            </TouchableOpacity>
-          ))}
-        </MotiView>
-      </View>
+            {SITUATIONS.map((item) => {
+              const isSelected = situation === item.id;
+              return (
+                <TouchableOpacity
+                  key={item.id}
+                  onPress={() => setSituation(item.id)}
+                  className={`flex-row items-center rounded-2xl px-5 py-4 mb-3 border-2 ${
+                    isSelected
+                      ? 'bg-coral-light/30 border-coral'
+                      : 'bg-white border-border'
+                  }`}
+                  activeOpacity={0.7}
+                >
+                  <Text className="text-3xl mr-4">{item.emoji}</Text>
+                  <View className="flex-1">
+                    <Text className="text-charcoal font-body-semi text-base">{item.label}</Text>
+                    <Text className="text-warmgrey font-body text-sm mt-0.5">{item.description}</Text>
+                  </View>
+                  <View
+                    className={`w-6 h-6 rounded-full items-center justify-center ${
+                      isSelected ? 'bg-coral' : 'border-2 border-border'
+                    }`}
+                  >
+                    {isSelected && (
+                      <Text className="text-white text-xs font-body-semi">✓</Text>
+                    )}
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
+          </MotiView>
+        </View>
+      </ScrollView>
 
-      <View className="px-6 pb-6">
-        <Button title="Continue" onPress={handleContinue} disabled={!canContinue} />
+      <View className="px-7 pb-6 pt-3 bg-cream">
+        <Button title="Continue" onPress={handleContinue} disabled={!canContinue} size="lg" />
       </View>
     </SafeAreaView>
   );

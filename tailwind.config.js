@@ -23,6 +23,15 @@ module.exports = {
         'body-semi': ['Inter-SemiBold'],
         'body-bold': ['Inter-Bold'],
       },
+      borderRadius: {
+        '3xl': '24px',
+        '4xl': '32px',
+      },
+      boxShadow: {
+        card: '0 2px 8px rgba(0, 0, 0, 0.06)',
+        lg: '0 4px 16px rgba(0, 0, 0, 0.1)',
+        xl: '0 8px 24px rgba(0, 0, 0, 0.15)',
+      },
     },
   },
   plugins: [],

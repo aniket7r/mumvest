@@ -49,29 +49,29 @@ export default function SaveScreen() {
   return (
     <SafeAreaView className="flex-1 bg-cream" edges={['top']}>
       {/* Header */}
-      <View className="px-5 pt-4 pb-2">
-        <Text className="text-charcoal text-2xl font-bold">Save</Text>
+      <View className="px-5 pt-5 pb-3">
+        <Text className="text-charcoal text-3xl font-bold font-heading">Save</Text>
       </View>
 
       {/* Tab Selector */}
-      <View className="flex-row mx-5 mb-4 bg-white rounded-xl p-1">
+      <View className="flex-row mx-5 mb-5 bg-white rounded-full p-1.5 border border-border shadow-card">
         <TouchableOpacity
           onPress={() => setActiveTab('goals')}
-          className={`flex-1 py-2.5 rounded-lg items-center ${
-            activeTab === 'goals' ? 'bg-coral' : ''
+          className={`flex-1 py-3 rounded-full items-center ${
+            activeTab === 'goals' ? 'bg-coral shadow-card' : ''
           }`}
         >
-          <Text className={`font-semibold text-sm ${
+          <Text className={`font-bold text-sm ${
             activeTab === 'goals' ? 'text-white' : 'text-warmgrey'
           }`}>Goals</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setActiveTab('swaps')}
-          className={`flex-1 py-2.5 rounded-lg items-center ${
-            activeTab === 'swaps' ? 'bg-coral' : ''
+          className={`flex-1 py-3 rounded-full items-center ${
+            activeTab === 'swaps' ? 'bg-coral shadow-card' : ''
           }`}
         >
-          <Text className={`font-semibold text-sm ${
+          <Text className={`font-bold text-sm ${
             activeTab === 'swaps' ? 'text-white' : 'text-warmgrey'
           }`}>Smart Swaps</Text>
         </TouchableOpacity>
@@ -80,9 +80,9 @@ export default function SaveScreen() {
       {activeTab === 'goals' ? (
         <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
           {/* Total Saved Banner */}
-          <Card className="mb-4 bg-coral items-center py-6">
-            <Text className="text-white/70 text-sm font-semibold mb-1">TOTAL SAVED</Text>
-            <Text className="text-white text-3xl font-bold">
+          <Card className="mb-6 bg-coral items-center py-8 px-6">
+            <Text className="text-white/70 text-xs font-bold tracking-wider mb-2">TOTAL SAVED</Text>
+            <Text className="text-white text-4xl font-bold font-heading">
               {formatCurrency(totalSaved, currency)}
             </Text>
           </Card>
@@ -104,19 +104,19 @@ export default function SaveScreen() {
                   <Card
                     key={goal.id}
                     onPress={() => router.push(`/goal/${goal.id}`)}
-                    className="mb-3 flex-row items-center"
+                    className="mb-4 flex-row items-center p-5"
                   >
-                    <ProgressRing progress={progress.percentage} size={56} strokeWidth={5}>
-                      <Text className="text-xl">{goal.emoji}</Text>
+                    <ProgressRing progress={progress.percentage} size={64} strokeWidth={5}>
+                      <Text className="text-2xl">{goal.emoji}</Text>
                     </ProgressRing>
-                    <View className="flex-1 ml-4">
-                      <Text className="text-charcoal text-base font-semibold">{goal.name}</Text>
-                      <Text className="text-warmgrey text-sm">
+                    <View className="flex-1 ml-5">
+                      <Text className="text-charcoal text-lg font-bold font-heading">{goal.name}</Text>
+                      <Text className="text-warmgrey text-sm mt-0.5">
                         {formatCurrency(progress.saved, currency)} of {formatCurrency(progress.target, currency)}
                       </Text>
-                      <ProgressBar progress={progress.percentage} height={4} className="mt-2" />
+                      <ProgressBar progress={progress.percentage} height={5} className="mt-2.5" />
                     </View>
-                    <Ionicons name="chevron-forward" size={20} color={colors.textTertiary} />
+                    <Ionicons name="chevron-forward" size={22} color={colors.textTertiary} />
                   </Card>
                 );
               })}
@@ -124,10 +124,10 @@ export default function SaveScreen() {
               {/* Add Goal Button */}
               <TouchableOpacity
                 onPress={() => router.push('/goal/create')}
-                className="border-2 border-dashed border-border rounded-2xl py-6 items-center mb-8"
+                className="border-2 border-dashed border-border rounded-3xl py-8 items-center mb-8"
               >
-                <Ionicons name="add" size={28} color={colors.textTertiary} />
-                <Text className="text-warmgrey text-sm font-semibold mt-1">Add a Goal</Text>
+                <Ionicons name="add-circle-outline" size={32} color={colors.textTertiary} />
+                <Text className="text-warmgrey text-sm font-bold mt-2">Add a Goal</Text>
               </TouchableOpacity>
             </>
           )}
@@ -136,12 +136,12 @@ export default function SaveScreen() {
         <ScrollView className="flex-1 px-5" showsVerticalScrollIndicator={false}>
           {/* Swaps Summary */}
           {adoptedSwaps.length > 0 && (
-            <Card className="mb-4 bg-teal">
-              <Text className="text-white/70 text-xs font-semibold mb-1">ESTIMATED MONTHLY SAVINGS</Text>
-              <Text className="text-white text-2xl font-bold">
+            <Card className="mb-6 bg-teal py-8 px-6 items-center">
+              <Text className="text-white/70 text-xs font-bold tracking-wider mb-2">ESTIMATED MONTHLY SAVINGS</Text>
+              <Text className="text-white text-3xl font-bold font-heading">
                 {formatCurrency(estimatedMonthlySavings, currency)}/mo
               </Text>
-              <Text className="text-white/70 text-xs mt-1">
+              <Text className="text-white/70 text-sm mt-2">
                 From {adoptedSwaps.length} active swap{adoptedSwaps.length !== 1 ? 's' : ''}
               </Text>
             </Card>
@@ -149,36 +149,38 @@ export default function SaveScreen() {
 
           {/* Unadopted Swaps */}
           {unadoptedSwaps.slice(0, 10).map((swap) => (
-            <Card key={swap.id} className="mb-3">
+            <Card key={swap.id} className="mb-4 p-6">
               <View className="flex-row items-start">
                 <View className="flex-1">
-                  <View className="flex-row items-center mb-1">
+                  <View className="flex-row items-center mb-2">
                     {swap.isRebeccaPick && (
-                      <View className="bg-amber-light rounded-full px-2 py-0.5 mr-2">
-                        <Text className="text-amber text-xs font-semibold">Rebecca's Pick</Text>
+                      <View className="bg-amber-light rounded-full px-3 py-1 mr-2">
+                        <Text className="text-amber text-xs font-bold">Rebecca's Pick</Text>
                       </View>
                     )}
-                    <Text className="text-warmgrey text-xs capitalize">{swap.category}</Text>
+                    <Text className="text-warmgrey text-xs capitalize font-body-medium">{swap.category}</Text>
                   </View>
-                  <Text className="text-charcoal text-base font-semibold mb-1">{swap.title}</Text>
-                  <Text className="text-warmgrey text-sm mb-2">{swap.description}</Text>
-                  <Text className="text-savings text-sm font-semibold">
-                    Save ~{formatCurrency(swap.potentialMonthlySaving, currency)}/month
-                  </Text>
+                  <Text className="text-charcoal text-lg font-bold font-heading mb-1.5">{swap.title}</Text>
+                  <Text className="text-warmgrey text-sm leading-5 mb-3">{swap.description}</Text>
+                  <View className="flex-row items-center bg-savings-light rounded-full px-3 py-1.5 self-start">
+                    <Text className="text-savings text-sm font-bold">
+                      Save ~{formatCurrency(swap.potentialMonthlySaving, currency)}/month
+                    </Text>
+                  </View>
                 </View>
               </View>
-              <View className="flex-row mt-3 gap-3">
+              <View className="flex-row mt-4 gap-3">
                 <TouchableOpacity
                   onPress={() => handleAdoptSwap(swap.id)}
-                  className="flex-1 bg-teal rounded-xl py-2.5 items-center"
+                  className="flex-1 bg-teal rounded-2xl py-3 items-center shadow-card"
                 >
-                  <Text className="text-white text-sm font-semibold">I'll try this</Text>
+                  <Text className="text-white text-sm font-bold">I'll try this</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => dismissSwap(swap.id)}
-                  className="flex-1 border border-border rounded-xl py-2.5 items-center"
+                  className="flex-1 border border-border rounded-2xl py-3 items-center"
                 >
-                  <Text className="text-warmgrey text-sm">Not for me</Text>
+                  <Text className="text-warmgrey text-sm font-semibold">Not for me</Text>
                 </TouchableOpacity>
               </View>
             </Card>
