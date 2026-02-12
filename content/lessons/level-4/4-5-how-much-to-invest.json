@@ -1,0 +1,61 @@
+{
+  "id": "4-5",
+  "title": "How Much to Invest (Hint: Less Than You Think)",
+  "level": 4,
+  "order": 5,
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "You Don't Need a Fortune to Start"
+    },
+    {
+      "type": "text",
+      "content": "One of the biggest myths about investing is that you need a lot of money to get started. \"I'll invest when I have more money\" is the most expensive sentence in the English language. The truth? Starting with $25 a month will put you ahead of the vast majority of people who keep waiting for the \"right time\" that never comes."
+    },
+    {
+      "type": "text",
+      "content": "Think about what you spend $25 on without thinking twice: a couple of coffees out, a kids' magazine subscription, a takeaway meal. Now imagine redirecting just that much into your future. You'd barely notice it leaving your account each month, but in 20 years, that $25 a month could grow to over $14,000. That's real money grown from pocket change."
+    },
+    {
+      "type": "heading",
+      "content": "Why Timing the Market Is a Myth"
+    },
+    {
+      "type": "text",
+      "content": "\"I'll wait until the market dips to invest.\" Sound smart? It's actually a trap. Studies have shown that if you missed just the 10 best days in the stock market over the past 20 years, your returns would be cut in more than half. The problem is, nobody knows when those best days will happen. They often come right after the worst days, when everyone is too scared to invest."
+    },
+    {
+      "type": "text",
+      "content": "Here's a fun fact: researchers tested three investing strategies over decades. Investor A had perfect timing and invested at the market low every single year. Investor B invested on the first of every month no matter what (this is called dollar-cost averaging). Investor C had the worst timing and invested at the market peak every year. The result? All three made money. And the difference between perfect timing and terrible timing was surprisingly small. Consistency beat timing every single time."
+    },
+    {
+      "type": "takeaway",
+      "content": "You don't need to time the market. Investing a fixed amount every month \u2014 rain or shine \u2014 is one of the most reliable strategies that exists. The best time to start was yesterday. The second best time is today."
+    },
+    {
+      "type": "heading",
+      "content": "Finding Your Number"
+    },
+    {
+      "type": "text",
+      "content": "Here's a simple way to figure out how much to invest each month:\n\n1. Look at your budget (you built one in Level 2 \u2014 go you!)\n2. Make sure your emergency fund is on track\n3. Check what's left after essentials and a little fun money\n4. Start with an amount that feels comfortable \u2014 even $10\n5. Increase it by $5 every few months as you get more confident\n\nThe golden rule: invest money you won't need for at least 5 years. This gives your investments time to ride out any bumps. Money for next month's groceries? Keep that in your bank account. Money for your child's university in 15 years? That's investing money."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Let's find your starting number! Enter the amount you could realistically invest each month right now. Don't overthink it \u2014 even $10 counts. We'll show you what it could grow to over time.",
+      "exerciseType": "calculator",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "Here's a perspective shift: if you invest $50 a month from the time your baby is born, by the time they're 18, you could have roughly $24,000. That's from putting aside less than $2 a day. Less than a coffee. You're not sacrificing today to invest \u2014 you're just redirecting a tiny stream of money toward a river of future wealth."
+    },
+    {
+      "type": "encouragement",
+      "content": "The hardest part of investing isn't picking the right fund or timing the market \u2014 it's believing that your small amount matters. It does. Every single dollar you invest is a vote of confidence in your family's future. Start where you are, with what you have. That's more than enough."
+    }
+  ]
+}

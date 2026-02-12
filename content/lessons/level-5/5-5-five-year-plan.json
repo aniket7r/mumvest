@@ -1,0 +1,74 @@
+{
+  "id": "5-5",
+  "title": "Your 5-Year Money Plan",
+  "level": 5,
+  "order": 5,
+  "readTimeMinutes": 6,
+  "isPremium": true,
+  "xpReward": 100,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "This Is Your Graduation Moment"
+    },
+    {
+      "type": "text",
+      "content": "Take a breath and look at how far you've come. You started this journey learning what investing even means. Now you understand index funds, bonds, REITs, retirement accounts, property decisions, and building multiple income streams. You've gone from financial beginner to financially informed - and that changes everything for your family. This final lesson is about pulling it all together into a real plan. Not a vague \"I should save more\" plan, but a concrete, written-down, this-is-what-I'm-doing plan. Because the women who write down their financial goals are 42% more likely to achieve them."
+    },
+    {
+      "type": "heading",
+      "content": "Year 1: Build Your Foundation"
+    },
+    {
+      "type": "text",
+      "content": "Your first year is about getting the essentials locked in. If you haven't already: build your emergency fund to at least $2,000-$5,000 (or 3 months of essential expenses). Set up automatic investing - even $50-$100 per month into an index fund. Pay off any high-interest debt (credit cards, store cards - anything above 10%). Review your spending and find at least $100 per month you can redirect to your future. Open a retirement account if you don't have one, and contribute at least enough to get any employer match. Year 1 isn't glamorous, but it's the foundation that everything else is built on."
+    },
+    {
+      "type": "heading",
+      "content": "Years 2-3: Grow and Diversify"
+    },
+    {
+      "type": "text",
+      "content": "With your foundation solid, years 2-3 are about building momentum. Increase your monthly investment amount by even $25-$50 each year. Diversify your portfolio - add bonds or REITs alongside your index funds. Explore an additional income stream. Grow your emergency fund to a full 6 months of expenses (around $10,000-$15,000 for most families). Start thinking seriously about bigger goals: a home deposit, your children's education fund, or a career change. By the end of year 3, if you've been investing $200 per month, you'll have roughly $8,000-$9,000 in investments (including growth). That's real, tangible wealth you created from nothing."
+    },
+    {
+      "type": "heading",
+      "content": "Years 4-5: Accelerate and Dream Bigger"
+    },
+    {
+      "type": "text",
+      "content": "This is where the magic of compounding starts to become visible. Your investments are growing not just from what you put in, but from the returns earning their own returns. If you've been consistent, by year 5 you might have $20,000-$30,000 invested (from putting in $300-$400 per month). But more importantly, you'll have built the habits and knowledge that will carry you for the rest of your life. In years 4-5: push your retirement contributions toward that 15% target. Consider maxing out your tax-advantaged accounts. Reassess your rent vs buy decision with real numbers. Teach your kids about money - you now know enough to give them a massive head start. Think about what financial freedom means to you. Maybe it's retiring at 55. Maybe it's working part-time. Maybe it's knowing you could handle any emergency without panic."
+    },
+    {
+      "type": "takeaway",
+      "content": "A 5-year plan isn't a rigid contract - it's a compass. Life will throw surprises at you. Kids get sick, cars break down, opportunities appear out of nowhere. Your plan will change, and that's perfectly fine. What matters is that you have a direction. Women who plan their finances build, on average, 3 times more wealth over 10 years than those who don't."
+    },
+    {
+      "type": "text",
+      "content": "Here's something beautiful to think about: if you invest $300 per month for the next 20 years at a 7% average return, you'll have approximately $156,000. In 25 years, it's about $243,000. In 30 years, over $365,000. The money you start investing today is the most powerful money you'll ever invest, because it has the longest time to grow. Every single month you stay consistent is a gift to your future."
+    },
+    {
+      "type": "exercise",
+      "prompt": "This is the most important exercise in the entire programme. Take your time with it. Write out your financial goals for 1 year, 3 years, and 5 years. Be specific with amounts, dates, and actions. This is your plan - make it real.",
+      "exerciseType": "reflection",
+      "minLength": 100,
+      "placeholder": "MY 1-YEAR GOALS:\n- Emergency fund target: $______\n- Monthly investing amount: $______\n- Debt to pay off: \n- One new financial habit I'll build:\n\nMY 3-YEAR GOALS:\n- Total invested: $______\n- Income streams I'll have:\n- Big goal I'm saving for:\n- How my financial confidence will look:\n\nMY 5-YEAR GOALS:\n- Where I want my net worth to be: $______\n- What financial freedom means to me:\n- What I want my kids to know about money:\n- The life I'm building toward:"
+    },
+    {
+      "type": "text",
+      "content": "Save what you just wrote somewhere you'll see it regularly - on your phone, stuck to your fridge, in a journal. Read it once a month. Update it as your life changes. This isn't homework that gets filed away. This is your roadmap to a completely different financial future."
+    },
+    {
+      "type": "heading",
+      "content": "A Final Word From Us to You"
+    },
+    {
+      "type": "text",
+      "content": "When you started this programme, you might have felt overwhelmed, nervous, or even a bit scared of money and investing. Look at you now. You understand things that most adults never learn. You have tools, knowledge, and a plan. You're not just managing money - you're building generational wealth. Your children will grow up watching a mum who takes control of her finances, who invests for the future, who doesn't let fear stop her. That example is worth more than any inheritance."
+    },
+    {
+      "type": "encouragement",
+      "content": "Congratulations, you absolute legend. You've completed the entire MumVest programme. You came in as a beginner and you're leaving as an investor with a plan. Not everyone finishes what they start - but you did. Whatever happens next, remember this: you are capable, you are smart enough, and your family's financial future is brighter because of the work you've done here. Now go out there and grow that wealth. We're so proud of you."
+    }
+  ]
+}

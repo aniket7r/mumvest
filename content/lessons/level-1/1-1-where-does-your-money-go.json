@@ -1,0 +1,45 @@
+{
+  "id": "1-1",
+  "level": 1,
+  "order": 1,
+  "title": "Where Does Your Money Go?",
+  "readTimeMinutes": 4,
+  "isPremium": false,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Let's start with a question that might make you uncomfortable: Do you know exactly where your money goes each month? If not, you're not alone — most people don't."
+    },
+    {
+      "type": "text",
+      "content": "Studies show that the average person underestimates their monthly spending by 40%. That's not a typo — nearly half your spending is invisible to you."
+    },
+    {
+      "type": "heading",
+      "content": "THE 24-HOUR TRACKING CHALLENGE"
+    },
+    {
+      "type": "text",
+      "content": "For just one day, write down every single thing you spend money on. The morning coffee, the parking meter, the snack at the petrol station, the app subscription that auto-renewed. Everything. Don't judge it — just observe."
+    },
+    {
+      "type": "text",
+      "content": "Most people find that small, unconscious purchases add up to $200-400 per month. That's $2,400-4,800 per year — potentially enough for a family holiday!"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "reflection",
+      "prompt": "What surprised you most about your spending today? Write down the one purchase that made you think 'I didn't realize I spent that much on this.'",
+      "inputType": "text"
+    },
+    {
+      "type": "takeaway",
+      "content": "Awareness is the first step. You can't change what you don't see. The goal isn't to feel guilty — it's to feel informed."
+    },
+    {
+      "type": "encouragement",
+      "content": "You just took the bravest step — looking at the truth. That takes grit! You're already ahead of most people. Tomorrow, we'll turn this awareness into a simple plan."
+    }
+  ]
+}

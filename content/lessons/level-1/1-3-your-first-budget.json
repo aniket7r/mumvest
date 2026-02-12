@@ -1,0 +1,46 @@
+{
+  "id": "1-3",
+  "level": 1,
+  "order": 3,
+  "title": "Your First Budget",
+  "readTimeMinutes": 6,
+  "isPremium": false,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "text",
+      "content": "The word 'budget' makes most people cringe. It sounds restrictive, boring, and like something only accountants enjoy. Let's change that. A budget is simply a plan for your money. It's you telling your money where to go, instead of wondering where it went."
+    },
+    {
+      "type": "heading",
+      "content": "THE 3-CATEGORY BUDGET"
+    },
+    {
+      "type": "text",
+      "content": "Forget complicated spreadsheets with 47 categories. We're keeping it dead simple with just 3 categories:\n\n1. BILLS — Everything that's the same (or similar) every month. Rent, utilities, insurance, phone, subscriptions. These are predictable.\n\n2. SPENDING — Everything else you spend day-to-day. Groceries, fuel, kids' activities, eating out, shopping. This is where the magic happens.\n\n3. SAVINGS — Whatever you can put aside. Even $20/week is $1,040/year."
+    },
+    {
+      "type": "text",
+      "content": "The trick is to figure out your Bills total first (it barely changes month to month), then decide your Savings amount, and whatever's left is your Spending money. Bills + Savings first, Spending gets the rest."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "checklist",
+      "prompt": "List your monthly bills. Tick each one you know the exact amount of:",
+      "inputType": "text",
+      "options": ["Rent/Mortgage", "Electricity/Gas", "Water", "Internet", "Phone", "Insurance", "Car payment", "Subscriptions"]
+    },
+    {
+      "type": "text",
+      "content": "Pro tip: For bills that vary (like electricity), use the highest bill from the last 3 months as your budget amount. If it comes in lower, that's bonus savings!"
+    },
+    {
+      "type": "takeaway",
+      "content": "A budget with 3 categories is better than no budget. Complexity is the enemy of action. Keep it simple, keep it going."
+    },
+    {
+      "type": "encouragement",
+      "content": "You've just created something that 60% of families don't have — a spending plan. That's not boring, that's powerful. Your money now has a job!"
+    }
+  ]
+}

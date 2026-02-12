@@ -1,0 +1,71 @@
+{
+  "id": "5-2",
+  "title": "Retirement: It's Never Too Late",
+  "level": 5,
+  "order": 2,
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "Let's Talk About Future You"
+    },
+    {
+      "type": "text",
+      "content": "Retirement might feel like a lifetime away - or it might feel terrifyingly close. Either way, the single most important thing to know is this: starting now, even with small amounts, is dramatically better than waiting. A mum who invests $200 per month starting at age 30 will have roughly $400,000 by age 65. Wait until 40 to start the same $200 per month? You'd end up with about $175,000. That 10-year head start is worth over $225,000. But even if you're starting at 40, 45, or 50 - you can still build something meaningful."
+    },
+    {
+      "type": "heading",
+      "content": "Pensions, 401(k)s, and IRAs - In Plain English"
+    },
+    {
+      "type": "text",
+      "content": "These are all just special accounts designed to help you save for retirement, with tax benefits as a bonus. A pension is a plan where your employer puts money aside for you (these are rarer now, but some jobs still offer them). A 401(k) is an account your employer offers where you contribute from your pay cheque - and many employers will match your contributions. That match is literally free money. If your employer matches 3%, and you put in 3% of your $50,000 salary ($1,500), they add another $1,500. That's a 100% return on day one. An IRA (Individual Retirement Account) is one you open yourself. You can contribute up to $7,000 per year (or $8,000 if you're 50+). The money grows tax-free or tax-deferred depending on the type."
+    },
+    {
+      "type": "takeaway",
+      "content": "If your employer offers a 401(k) match, contribute at least enough to get the full match. Walking away from an employer match is like leaving a pay rise on the table. Even $50 per month into a retirement account is a win."
+    },
+    {
+      "type": "heading",
+      "content": "How Much Do You Actually Need?"
+    },
+    {
+      "type": "text",
+      "content": "A common guideline is that you'll need about 25 times your annual expenses saved up for retirement. If you spend $40,000 per year, that's roughly $1,000,000. Sounds huge, right? But remember, this builds up over decades. You don't need to save a million dollars from your pay cheque - your investments grow and compound over time. Even $300 per month invested over 30 years at an average 7% return grows to about $340,000. Add in employer matches, pay rises, and Social Security or state pension, and the picture gets much brighter."
+    },
+    {
+      "type": "text",
+      "content": "The most important number isn't the final total - it's the percentage of your income you save. Financial planners suggest aiming for 15% of your income toward retirement. Can't do 15% right now? Start with 5% and increase by 1% every year. You'll barely notice the difference, but your retirement account will."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Let's see a quick retirement projection. Enter your current age below, and we'll estimate what monthly investing could grow to by age 65 (assuming a 7% average annual return):",
+      "exerciseType": "calculator",
+      "inputType": "number",
+      "fields": [
+        {
+          "label": "Your current age",
+          "key": "age",
+          "placeholder": "e.g. 35"
+        },
+        {
+          "label": "Monthly amount you could invest ($)",
+          "key": "monthlyAmount",
+          "placeholder": "e.g. 200"
+        }
+      ],
+      "formula": "futureValue = monthlyAmount * ((Math.pow(1 + 0.07/12, (65 - age) * 12) - 1) / (0.07/12))",
+      "resultTemplate": "If you invest ${monthlyAmount} per month for {yearsLeft} years, you could have approximately ${result} by age 65. That's from only ${totalContributed} of your own money - the rest is growth!"
+    },
+    {
+      "type": "text",
+      "content": "Remember, these projections assume averages. Real returns will bounce around year to year. But over 20-30 years, the stock market has historically averaged around 7-10% per year after inflation. The key is staying invested through the ups and downs - not trying to time the market."
+    },
+    {
+      "type": "encouragement",
+      "content": "Whether you're 25 or 55, today is the best day to start. You're not behind - you're beginning. Every dollar you put away now is a gift to the woman you'll be in 20 years. She's going to be so grateful you started today."
+    }
+  ]
+}

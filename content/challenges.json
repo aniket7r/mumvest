@@ -1,0 +1,86 @@
+[
+  {
+    "id": "challenge-001",
+    "name": "No-Spend Weekend",
+    "description": "Go a full weekend without spending a single dollar. Get creative with what you already have!",
+    "difficulty": "beginner",
+    "durationHours": 48,
+    "checkInCount": 5,
+    "checkInLabels": ["Sat morning", "Sat afternoon", "Sat evening", "Sun morning", "Sun afternoon"],
+    "badgeReward": "iron-will",
+    "estimatedSaving": 85,
+    "isPremium": false
+  },
+  {
+    "id": "challenge-002",
+    "name": "Meal Prep Master",
+    "description": "Prep all lunches for the work week on Sunday. No buying lunch for 5 days!",
+    "difficulty": "beginner",
+    "durationHours": 120,
+    "checkInCount": 5,
+    "checkInLabels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "badgeReward": "meal-master",
+    "estimatedSaving": 75,
+    "isPremium": false
+  },
+  {
+    "id": "challenge-003",
+    "name": "Coffee Detox Week",
+    "description": "Make coffee at home every day for a week. No cafe purchases!",
+    "difficulty": "intermediate",
+    "durationHours": 168,
+    "checkInCount": 7,
+    "checkInLabels": ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+    "badgeReward": "caffeine-free",
+    "estimatedSaving": 35,
+    "isPremium": false
+  },
+  {
+    "id": "challenge-004",
+    "name": "Store-Brand Week",
+    "description": "Buy only store-brand products for your entire weekly shop. Compare the savings!",
+    "difficulty": "beginner",
+    "durationHours": 168,
+    "checkInCount": 3,
+    "checkInLabels": ["Shopping done", "Mid-week check", "Week complete"],
+    "badgeReward": "smart-shopper",
+    "estimatedSaving": 40,
+    "isPremium": false
+  },
+  {
+    "id": "challenge-005",
+    "name": "Subscription Audit",
+    "description": "Go through every subscription on your phone and bank statement. Cancel at least one thing you don't use!",
+    "difficulty": "beginner",
+    "durationHours": 72,
+    "checkInCount": 3,
+    "checkInLabels": ["List all subscriptions", "Decide what to cancel", "Cancelled!"],
+    "badgeReward": "subscription-slayer",
+    "estimatedSaving": 30,
+    "isPremium": false
+  },
+  {
+    "id": "challenge-007",
+    "name": "The 30-Day Savings Sprint",
+    "description": "Save something every single day for 30 days. Even $1 counts!",
+    "difficulty": "advanced",
+    "durationHours": 720,
+    "checkInCount": 6,
+    "checkInLabels": ["Week 1", "Week 2", "Week 3", "Week 4", "Day 28", "Day 30"],
+    "badgeReward": "sprint-champion",
+    "estimatedSaving": 200,
+    "isPremium": true
+  },
+  {
+    "id": "challenge-006",
+    "name": "Entertainment Swap Week",
+    "description": "Replace all paid entertainment with free alternatives for one week.",
+    "difficulty": "intermediate",
+    "durationHours": 168,
+    "checkInCount": 4,
+    "checkInLabels": ["Day 2", "Day 4", "Day 6", "Complete!"],
+    "badgeReward": "free-spirit",
+    "estimatedSaving": 50,
+    "isPremium": true
+  }
+]

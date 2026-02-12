@@ -1,0 +1,73 @@
+{
+  "id": "5-1",
+  "title": "Beyond Index Funds",
+  "level": 5,
+  "order": 1,
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "You've Outgrown the Basics - Let's Explore More"
+    },
+    {
+      "type": "text",
+      "content": "If you've been investing in index funds, give yourself a huge pat on the back. That alone puts you ahead of most people. But just like your kids eventually outgrow their first shoes, your portfolio can outgrow a single investment type. Let's talk about what else is out there - no finance degree required."
+    },
+    {
+      "type": "heading",
+      "content": "Bonds: The Steady, Reliable Friend"
+    },
+    {
+      "type": "text",
+      "content": "Think of bonds like lending money to the government or a big company. They promise to pay you back with interest. A $1,000 bond paying 4% gives you $40 per year - not flashy, but consistent. Bonds don't jump around in price like stocks do. When the stock market drops 20%, bonds often hold steady or even go up. That's why many investors keep 20-40% of their money in bonds, especially as they get older."
+    },
+    {
+      "type": "heading",
+      "content": "REITs: Own Property Without the Headaches"
+    },
+    {
+      "type": "text",
+      "content": "REITs (Real Estate Investment Trusts) let you invest in property - shopping centres, apartment buildings, hospitals - without actually buying a building. You can invest as little as $50. The best part? REITs are required by law to pay out 90% of their profits to investors, which means regular income landing in your account. It's like being a landlord without ever fixing a leaky tap."
+    },
+    {
+      "type": "heading",
+      "content": "Diversification: Don't Put All Your Eggs in One Basket"
+    },
+    {
+      "type": "text",
+      "content": "Diversification just means spreading your money across different types of investments so that if one goes down, the others can help cushion the fall. Imagine you have $10,000 to invest. Instead of putting it all in one place, you might split it: $5,000 in index funds, $2,000 in bonds, $2,000 in REITs, and $1,000 in an international fund. If stocks drop 15%, your bonds and REITs might only drop 3% - so your overall loss is much smaller."
+    },
+    {
+      "type": "takeaway",
+      "content": "Diversification isn't about finding the \"best\" investment. It's about making sure no single bad day in the market can wreck your whole plan. A mix of stocks, bonds, REITs, and international funds is like a balanced meal - each part plays a role."
+    },
+    {
+      "type": "text",
+      "content": "Here's a simple rule of thumb: subtract your age from 110. That's roughly the percentage you might keep in stocks, with the rest in bonds and other investments. So if you're 35, that's about 75% stocks and 25% bonds/other. If you're 45, it's about 65% stocks and 35% bonds/other. It's not a hard rule, but it's a solid starting point."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Which of these diversification types do you currently have (or want to explore)? Tick all that interest you:",
+      "exerciseType": "checklist",
+      "options": [
+        "Index funds (stocks from many companies)",
+        "Bonds (government or corporate)",
+        "REITs (real estate investment trusts)",
+        "International funds (companies outside your country)",
+        "Sector funds (tech, healthcare, energy, etc.)",
+        "Cash savings or money market accounts",
+        "Commodities (gold, silver, etc.)"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Don't feel pressured to invest in everything at once. Even adding just one new type of investment to what you already have makes your money more resilient. Start with what makes sense for your life right now. You can always add more later as you get comfortable."
+    },
+    {
+      "type": "encouragement",
+      "content": "You're not just investing anymore - you're building a real, grown-up portfolio. Most people never get this far. Your future self (and your kids) will thank you for learning this. One step at a time, mum. You've got this."
+    }
+  ]
+}

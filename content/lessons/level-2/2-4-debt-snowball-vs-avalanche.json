@@ -1,0 +1,49 @@
+{
+  "id": "2-4",
+  "level": 2,
+  "order": 4,
+  "title": "Debt: Snowball vs Avalanche",
+  "readTimeMinutes": 6,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "If you have debt, you're not alone. The average household carries $6,000+ in credit card debt. But here's the thing — there's a right way and a righter way to pay it off. Let's learn both so you can pick what works for your brain."
+    },
+    {
+      "type": "heading",
+      "content": "THE SNOWBALL METHOD"
+    },
+    {
+      "type": "text",
+      "content": "Made famous by Dave Ramsey, the snowball method is simple:\n\n1. List all debts from smallest balance to largest\n2. Pay minimums on everything\n3. Throw every extra dollar at the smallest debt\n4. When it's paid off, roll that payment into the next smallest\n\nWhy it works: You get quick wins. Paying off that first small debt gives you a dopamine hit and proves the system works. Motivation matters more than math for most people."
+    },
+    {
+      "type": "heading",
+      "content": "THE AVALANCHE METHOD"
+    },
+    {
+      "type": "text",
+      "content": "The avalanche method is the mathematician's choice:\n\n1. List all debts from highest interest rate to lowest\n2. Pay minimums on everything\n3. Throw every extra dollar at the highest-interest debt\n4. When it's paid off, roll that payment into the next highest\n\nWhy it works: You save the most money on interest over time. If you're motivated by pure logic and maximum savings, this is your method."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "reflection",
+      "prompt": "Which method appeals to you more — Snowball (quick emotional wins) or Avalanche (maximum money saved)? There's no wrong answer — the best method is the one you'll stick with.",
+      "inputType": "text"
+    },
+    {
+      "type": "text",
+      "content": "The honest truth? The difference in interest paid between the two methods is often less than $200 for debts under $10,000. What matters infinitely more is that you PICK ONE and START. The worst debt strategy is no strategy."
+    },
+    {
+      "type": "takeaway",
+      "content": "Snowball = motivation-first (pay smallest debts first). Avalanche = math-first (pay highest interest first). Both work. Pick the one that matches your personality and start today."
+    },
+    {
+      "type": "encouragement",
+      "content": "Having a debt payoff strategy puts you in the top 20% of borrowers. Most people just pay minimums and hope for the best. You're being intentional — and that makes all the difference."
+    }
+  ]
+}

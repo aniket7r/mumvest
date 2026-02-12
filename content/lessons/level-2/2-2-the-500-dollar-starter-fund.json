@@ -1,0 +1,45 @@
+{
+  "id": "2-2",
+  "level": 2,
+  "order": 2,
+  "title": "The $500 Starter Fund",
+  "readTimeMinutes": 5,
+  "isPremium": false,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Forget what you've heard about needing 3-6 months of expenses saved up. That's the destination, not the starting line. Right now, we're focused on one number: $500. That's your Starter Emergency Fund, and it's going to change how you sleep at night."
+    },
+    {
+      "type": "heading",
+      "content": "WHY $500 IS THE MAGIC NUMBER"
+    },
+    {
+      "type": "text",
+      "content": "Research from the Federal Reserve shows that $500 covers the vast majority of common emergencies:\n\n• Car repair: $200-$500\n• Urgent plumbing fix: $150-$400\n• Unexpected medical copay: $50-$250\n• Replacement appliance: $200-$500\n• Emergency travel: $200-$400\n\nWith $500 in the bank, you can handle most of life's curveballs without touching a credit card."
+    },
+    {
+      "type": "text",
+      "content": "Here's the plan to get there:\n\n1. Open a separate savings account (even a basic one). Keeping emergency money separate from spending money is crucial — out of sight, out of temptation.\n\n2. Set a weekly savings amount. Even $20/week gets you to $500 in 25 weeks — about 6 months.\n\n3. Boost it with windfalls. Tax refund? Birthday money? Sell something you don't use? Every lump sum gets you there faster."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "calculator",
+      "prompt": "How much can you realistically save per week toward your $500 Starter Fund? Enter a weekly amount and we'll calculate how long it will take:",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "Important rule: Your emergency fund is NOT for sales, treats, or 'I deserve this' moments. It's for genuine emergencies only. When you use it (and you will — that's what it's for), your first priority is building it back up."
+    },
+    {
+      "type": "takeaway",
+      "content": "$500 in a separate account. That's your first safety net. It won't cover everything, but it covers most things — and that peace of mind is priceless."
+    },
+    {
+      "type": "encouragement",
+      "content": "Most people never start because the 'right' number feels too far away. But you're starting with $500, and that's brilliant. Small, achievable targets build unstoppable momentum!"
+    }
+  ]
+}

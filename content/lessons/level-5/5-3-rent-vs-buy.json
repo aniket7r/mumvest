@@ -1,0 +1,84 @@
+{
+  "id": "5-3",
+  "title": "Property: Rent vs Buy",
+  "level": 5,
+  "order": 3,
+  "readTimeMinutes": 6,
+  "isPremium": true,
+  "xpReward": 100,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "The Biggest Financial Decision Most Families Face"
+    },
+    {
+      "type": "text",
+      "content": "\"You're throwing money away on rent!\" You've probably heard this a hundred times. But is it actually true? The honest answer might surprise you. Buying a home can be a wonderful investment - but it can also be a money pit if the timing or numbers aren't right. Let's look at the real maths so you can make the best decision for your family, not just follow what everyone else says."
+    },
+    {
+      "type": "heading",
+      "content": "The Hidden Costs of Buying a Home"
+    },
+    {
+      "type": "text",
+      "content": "When people say \"my mortgage is only $1,500 a month,\" they're usually forgetting a lot of extras. On a $300,000 home, here's what the real monthly cost often looks like: Mortgage payment: $1,500. Property taxes: $300. Home insurance: $150. Maintenance and repairs (budget 1-2% of home value per year): $250-$500. HOA fees (if applicable): $100-$400. That \"$1,500 mortgage\" actually costs $2,300 to $2,850 per month. Over 30 years, you'll also pay roughly $200,000 in interest alone on a $300,000 home at 6.5%. That's not money building equity - that's the cost of borrowing."
+    },
+    {
+      "type": "takeaway",
+      "content": "A home isn't just a mortgage payment. The true cost of homeownership is typically 40-90% more than the mortgage alone once you add taxes, insurance, maintenance, and repairs. Always calculate the full picture before deciding."
+    },
+    {
+      "type": "heading",
+      "content": "When Renting Is Actually the Smarter Choice"
+    },
+    {
+      "type": "text",
+      "content": "Renting gets a bad reputation, but it makes a lot of sense in certain situations. If you might move within 5 years, buying often costs more due to closing costs (typically $10,000-$20,000) that you won't recoup in a short timeframe. If your area has a high price-to-rent ratio (the home costs more than 20 times the annual rent), renting and investing the difference can actually build more wealth. If you'd have to drain your emergency fund for a deposit, buying puts you in a risky position - one surprise repair could spiral into debt."
+    },
+    {
+      "type": "text",
+      "content": "Here's a powerful comparison: Say renting costs you $1,500 per month and buying the same home costs $2,500 per month (including all the hidden costs). If you rent and invest that $1,000 difference every month at 7% average returns, after 10 years you'd have roughly $170,000 in investments. That's real wealth - and it's completely liquid, meaning you can access it anytime. A house locks your money up in walls and a roof."
+    },
+    {
+      "type": "heading",
+      "content": "When Buying Makes Great Sense"
+    },
+    {
+      "type": "text",
+      "content": "Buying is often a great choice when: you plan to stay for 7+ years, so closing costs get spread over time. Your total monthly housing cost (everything included) is similar to or less than renting. You have a solid deposit (ideally 20% to avoid private mortgage insurance, which adds $100-$300 per month). You still have 3-6 months of expenses saved after the deposit. And you genuinely want the stability and freedom of owning your space."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Let's compare the numbers for your situation. Enter your local figures below to see a side-by-side comparison:",
+      "exerciseType": "calculator",
+      "inputType": "number",
+      "fields": [
+        {
+          "label": "Monthly rent in your area ($)",
+          "key": "monthlyRent",
+          "placeholder": "e.g. 1500"
+        },
+        {
+          "label": "Home purchase price you're considering ($)",
+          "key": "homePrice",
+          "placeholder": "e.g. 300000"
+        },
+        {
+          "label": "Mortgage interest rate (%)",
+          "key": "interestRate",
+          "placeholder": "e.g. 6.5"
+        }
+      ],
+      "formula": "monthlyMortgage = (homePrice * 0.8) * (interestRate/100/12) / (1 - Math.pow(1 + interestRate/100/12, -360)); totalMonthlyCost = monthlyMortgage + (homePrice * 0.015 / 12) + 150; difference = totalMonthlyCost - monthlyRent;",
+      "resultTemplate": "Estimated monthly mortgage (with 20% down): ${monthlyMortgage}. Add taxes, insurance, and maintenance: total ~${totalMonthlyCost}/month. That's ${difference} more than your ${monthlyRent} rent. If you invested that difference, it could grow significantly over time."
+    },
+    {
+      "type": "text",
+      "content": "There's no universally right answer here. Some families thrive as homeowners. Others build more wealth and flexibility as renters who invest. The important thing is that you run the numbers for YOUR situation instead of following generic advice. Your family, your city, and your goals are unique."
+    },
+    {
+      "type": "encouragement",
+      "content": "Just by learning the real maths behind this decision, you're miles ahead of most people who buy or rent on autopilot. Whether you choose a home with a garden or a flat with freedom, you're making an informed choice. That's what smart mums do."
+    }
+  ]
+}

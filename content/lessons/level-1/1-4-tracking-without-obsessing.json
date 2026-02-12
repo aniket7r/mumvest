@@ -1,0 +1,45 @@
+{
+  "id": "1-4",
+  "level": 1,
+  "order": 4,
+  "title": "Tracking Without Obsessing",
+  "readTimeMinutes": 4,
+  "isPremium": false,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Here's a trap many people fall into: they start tracking every penny and burn out within 2 weeks. Tracking should feel empowering, not exhausting. Let's find your sweet spot."
+    },
+    {
+      "type": "heading",
+      "content": "THE WEEKLY CHECK-IN METHOD"
+    },
+    {
+      "type": "text",
+      "content": "Instead of tracking daily, do a 10-minute check-in once a week. Sunday evening works great — the kids are in bed, you've got a cup of tea, and you review the week.\n\nHere's all you need to check:\n• How much did I save this week?\n• Did I stick to my spending money?\n• Any unexpected costs I need to plan for next week?"
+    },
+    {
+      "type": "text",
+      "content": "That's it. Three questions. Ten minutes. No spreadsheet required — your MumVest app does the tracking for you. You just need to log your savings when they happen."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "reflection",
+      "prompt": "When is the best time in your week for a 10-minute money check-in? Pick a specific day and time that works for your family routine.",
+      "inputType": "text"
+    },
+    {
+      "type": "text",
+      "content": "Research shows that people who check their finances weekly (not daily, not monthly — weekly) have the best long-term financial outcomes. Daily is obsessive. Monthly is too late to course-correct. Weekly is the Goldilocks zone."
+    },
+    {
+      "type": "takeaway",
+      "content": "Track weekly, not daily. Three questions, ten minutes, one cup of tea. That's your entire financial management system."
+    },
+    {
+      "type": "encouragement",
+      "content": "You're building a sustainable habit, not a punishment. The families who get ahead aren't the ones who track obsessively — they're the ones who show up consistently. A weekly check-in you actually do beats a daily tracker you abandon!"
+    }
+  ]
+}

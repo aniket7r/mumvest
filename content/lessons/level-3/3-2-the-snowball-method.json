@@ -1,0 +1,68 @@
+{
+  "id": "3-2",
+  "level": 3,
+  "order": 2,
+  "title": "The Snowball Method",
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "If you've ever felt overwhelmed by debt — a credit card here, a personal loan there, maybe an overdue phone bill — you're not alone. Most mums juggling a household carry more than one debt at a time. The good news? There's a proven strategy to knock them out one by one, and it feels amazing."
+    },
+    {
+      "type": "heading",
+      "content": "WHAT IS THE SNOWBALL METHOD?"
+    },
+    {
+      "type": "text",
+      "content": "The snowball method is simple: you list every debt you owe from smallest balance to largest, then throw all your extra money at the smallest one first. You keep paying minimums on everything else. Once the smallest debt is gone, you roll that payment into the next smallest. Like a snowball rolling downhill, your payments get bigger and bigger as each debt disappears."
+    },
+    {
+      "type": "text",
+      "content": "Here's a real example. Say you're Sarah, a mum of two, and you have:\n\n- Overdue phone bill: $120\n- Store credit card: $800\n- Personal loan: $3,200\n- Car loan: $9,500\n\nSarah has $200 extra per month after minimums. She puts all $200 toward the $120 phone bill. It's gone in one month. That quick win feels incredible.\n\nNext month, she puts the full $200 toward the $800 store card. Four months later — gone. Now she's cleared two debts and her confidence is soaring.\n\nShe rolls all $200 into the personal loan, on top of its minimum payment. Within a year, that's gone too. By the time she reaches the car loan, she's throwing serious money at it every month."
+    },
+    {
+      "type": "heading",
+      "content": "WHY QUICK WINS MATTER"
+    },
+    {
+      "type": "text",
+      "content": "The snowball method isn't about perfect maths — it's about momentum. Research from Harvard Business School found that people who pay off small debts first are more likely to become completely debt-free. Why? Because every time you cross a debt off your list, your brain gets a hit of motivation. You see progress. You believe it's possible.\n\nFor busy mums, this matters even more. You're already doing a hundred things a day. You need a strategy that gives you energy, not one that makes you feel like you're running on a treadmill going nowhere."
+    },
+    {
+      "type": "heading",
+      "content": "HOW TO SET UP YOUR SNOWBALL"
+    },
+    {
+      "type": "text",
+      "content": "Step 1: Write down every single debt you owe — the balance, the minimum payment, and who it's to.\n\nStep 2: Sort them from smallest balance to largest. Ignore interest rates for now (we'll cover that in the next lesson).\n\nStep 3: Work out how much extra you can put toward debt each month. Even $30 counts.\n\nStep 4: Pay minimums on everything except the smallest debt. Throw every spare dollar at that one.\n\nStep 5: When it's paid off, take that entire payment and add it to the next debt's minimum. Repeat until you're free."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "checklist",
+      "prompt": "Let's start your snowball! Check off each step as you go:",
+      "options": [
+        "I've listed all my debts with their balances",
+        "I've sorted them from smallest to largest balance",
+        "I know how much extra I can put toward debt each month",
+        "I've identified my smallest debt to attack first",
+        "I've set up minimum payments on all other debts",
+        "I've put a reminder in my phone to celebrate when the first one is paid off"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "A few tips to keep your snowball rolling:\n\n- Put any windfalls straight onto your smallest debt — tax returns, birthday money, selling old baby gear on Facebook Marketplace.\n- Tell someone about your plan. Accountability helps. A partner, a friend, even a group chat of mums doing the same thing.\n- Track your progress visually. Colour in a chart on the fridge. Let the kids colour it in with you. Make it a family project."
+    },
+    {
+      "type": "takeaway",
+      "content": "The snowball method works by paying off your smallest debt first, then rolling that payment into the next one. It's not about perfect maths — it's about building momentum and confidence. Every debt you cross off your list proves you can do this."
+    },
+    {
+      "type": "encouragement",
+      "content": "You don't need to be a financial expert to become debt-free. You just need a list, a plan, and the courage to start with that first small debt. Thousands of mums have snowballed their way to freedom — and you're next. One debt at a time, you've got this."
+    }
+  ]
+}

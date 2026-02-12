@@ -1,0 +1,61 @@
+{
+  "id": "3-3",
+  "level": 3,
+  "order": 3,
+  "title": "The Avalanche Method",
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "In the last lesson, you learned the snowball method — paying off the smallest debt first for quick wins. Now let's talk about its smarter (but tougher) cousin: the avalanche method. This one saves you the most money in interest. If you like the idea of paying less overall, this lesson is for you."
+    },
+    {
+      "type": "heading",
+      "content": "WHAT IS THE AVALANCHE METHOD?"
+    },
+    {
+      "type": "text",
+      "content": "Instead of targeting the smallest balance, the avalanche method targets the debt with the highest interest rate first. You still pay minimums on everything else, but you throw all your extra money at the most expensive debt — the one that's costing you the most each month just to carry."
+    },
+    {
+      "type": "text",
+      "content": "Let's use a real example. Meet Priya, a mum with three kids and these debts:\n\n- Store credit card: $1,500 at 22% interest\n- Personal loan: $4,000 at 12% interest\n- Car loan: $8,000 at 6% interest\n- Family loan (interest-free): $2,000 at 0%\n\nWith the snowball method, Priya would pay off the $1,500 store card first (smallest balance). With the avalanche method, she'd also start with the store card — but for a different reason: it has the highest interest rate at 22%.\n\nNow here's where they differ. If the store card had a $5,000 balance instead, the snowball method would say 'pay the $2,000 family loan first.' The avalanche method would still say 'pay the 22% store card first, because that interest rate is eating you alive.'"
+    },
+    {
+      "type": "heading",
+      "content": "SNOWBALL VS AVALANCHE: A SIDE-BY-SIDE LOOK"
+    },
+    {
+      "type": "text",
+      "content": "Let's say you have $300 extra per month and these three debts:\n\n- Credit card: $2,000 at 20% interest (minimum $50/month)\n- Personal loan: $5,000 at 10% interest (minimum $100/month)\n- Car loan: $3,000 at 5% interest (minimum $80/month)\n\nSnowball order: Credit card ($2,000) -> Car loan ($3,000) -> Personal loan ($5,000)\nAvalanche order: Credit card ($2,000) -> Personal loan ($5,000) -> Car loan ($3,000)\n\nIn this case, both methods start with the credit card. But after that, the avalanche tackles the 10% personal loan next, while the snowball tackles the smaller $3,000 car loan.\n\nThe result? The avalanche saves you roughly $400-$600 in total interest over the life of your repayment. That's real money — a family day out, new school shoes, or a boost to your emergency fund."
+    },
+    {
+      "type": "heading",
+      "content": "WHICH METHOD IS RIGHT FOR YOU?"
+    },
+    {
+      "type": "text",
+      "content": "Here's the honest truth: the best method is the one you'll actually stick with.\n\nChoose the SNOWBALL if:\n- You need quick wins to stay motivated\n- You have several small debts you can clear fast\n- You tend to lose steam on long projects\n\nChoose the AVALANCHE if:\n- You have a debt with a really high interest rate (18%+)\n- You're motivated by saving the most money overall\n- You're patient and disciplined with long-term goals\n\nAnd here's a secret: you can combine them. Start with the snowball to build confidence by clearing one or two small debts, then switch to the avalanche for the bigger ones. There are no rules — just progress."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "calculator",
+      "prompt": "Let's see how much interest is costing you. Enter your highest-interest debt balance below, and we'll show you how much that interest adds each month. (For example, $2,000 at 20% costs you about $33 per month in interest alone.)",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "That monthly interest number is money that goes straight to the lender — it doesn't reduce your balance at all. Every extra dollar you put toward this debt saves you from paying that interest. Think of it as giving yourself a pay rise."
+    },
+    {
+      "type": "takeaway",
+      "content": "The avalanche method pays off your highest-interest debt first, saving you the most money overall. The snowball gives you quick wins for motivation. Both work — the best method is the one you'll stick with. You can even combine them."
+    },
+    {
+      "type": "encouragement",
+      "content": "Whether you're a snowballer, an avalancher, or a bit of both — the fact that you're learning about debt strategies puts you ahead of most people. You're not just paying bills anymore. You're building a plan. And plans are what turn 'I hope things get better' into 'I know they will.'"
+    }
+  ]
+}

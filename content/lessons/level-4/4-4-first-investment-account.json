@@ -1,0 +1,66 @@
+{
+  "id": "4-4",
+  "title": "How to Open Your First Investment Account",
+  "level": 4,
+  "order": 4,
+  "readTimeMinutes": 6,
+  "isPremium": true,
+  "xpReward": 100,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "From Learning to Doing"
+    },
+    {
+      "type": "text",
+      "content": "You've learned what investing is, how compound interest works, and why index funds are brilliant. Now it's time for the exciting part: actually opening your first investment account. Don't worry \u2014 it's easier than signing up for a streaming service, and we're going to walk through every single step together."
+    },
+    {
+      "type": "text",
+      "content": "First, let's talk about the types of accounts. A brokerage account is the most flexible \u2014 you can put money in and take it out whenever you want. A retirement account (like a Roth IRA) gives you tax benefits, but your money is meant to stay put until retirement. For most mums just starting out, a simple brokerage account is the perfect first step. You can always open a retirement account later."
+    },
+    {
+      "type": "heading",
+      "content": "Platforms That Make It Easy"
+    },
+    {
+      "type": "text",
+      "content": "Gone are the days when you needed a fancy stockbroker in a suit. Today, you can open an investment account from your phone while the kids nap. Here are some beginner-friendly platforms:\n\n\u2022 Vanguard \u2014 The gold standard for index funds. Low fees. No flashy gimmicks. Perfect for buy-and-hold investing.\n\u2022 Fidelity \u2014 No minimums to start. Excellent customer service. Great app.\n\u2022 Charles Schwab \u2014 $0 account minimums and $0 trading fees. Very beginner-friendly.\n\u2022 Betterment \u2014 A \"robo-advisor\" that picks investments for you based on your goals. Great if you want a fully hands-off experience.\n\nAll of these let you start with as little as $1. Yes, one dollar. No excuses."
+    },
+    {
+      "type": "heading",
+      "content": "Your Step-by-Step Walkthrough"
+    },
+    {
+      "type": "text",
+      "content": "Here's exactly what happens when you open an account. It takes about 15 minutes:\n\nStep 1: Choose your platform and download the app or visit the website.\nStep 2: Click \"Open an Account\" and choose \"Individual Brokerage Account\" to start.\nStep 3: Enter your personal details \u2014 name, address, date of birth, and Social Security number (this is required by law and completely secure).\nStep 4: Link your bank account so you can transfer money in.\nStep 5: Set up an automatic monthly transfer \u2014 even $25 is a great start.\nStep 6: Choose your first investment \u2014 search for a total stock market index fund or S&P 500 index fund.\nStep 7: Turn on automatic investing so your monthly transfer buys shares without you lifting a finger.\n\nThat's it. Seven steps and you're an investor."
+    },
+    {
+      "type": "takeaway",
+      "content": "Opening an investment account takes about 15 minutes and you can start with as little as $1. Choose a beginner-friendly platform, link your bank, set up automatic monthly investments, and pick a simple index fund."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Here's your action checklist. Tick off each step as you complete it (you don't have to do them all today \u2014 even ticking one box is progress):",
+      "exerciseType": "checklist",
+      "options": [
+        "Research 2-3 investment platforms from the list above",
+        "Choose one platform and create an account",
+        "Have your ID and bank details ready",
+        "Link your bank account to the investment platform",
+        "Decide on a monthly amount you can invest (even $10 is great)",
+        "Set up an automatic monthly transfer",
+        "Search for and select a total market or S&P 500 index fund",
+        "Turn on automatic investing for your chosen fund"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "A few things not to stress about: your account balance will go up and down \u2014 that's completely normal. Don't check it every day (once a month is plenty). Don't panic if the market drops \u2014 that's like a sale on investments. And remember, you can always adjust your monthly amount. Life with kids is unpredictable, and your investment plan should be flexible enough to handle that."
+    },
+    {
+      "type": "encouragement",
+      "content": "Most people spend their whole lives thinking about investing \"someday.\" By working through this lesson, you're already miles ahead. Whether you open that account today, tomorrow, or next week \u2014 you now know exactly how to do it. That knowledge is yours forever. Your future self is going to be so grateful."
+    }
+  ]
+}

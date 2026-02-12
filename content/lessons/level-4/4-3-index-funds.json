@@ -1,0 +1,64 @@
+{
+  "id": "4-3",
+  "title": "Index Funds: The Lazy Genius Strategy",
+  "level": 4,
+  "order": 3,
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "What If the Easiest Option Was Also the Best?"
+    },
+    {
+      "type": "text",
+      "content": "Here's a secret that Wall Street doesn't want you to know: the simplest investment strategy almost always beats the complicated ones. We're talking about index funds \u2014 and they're about to become your new best friend. No stock-picking. No stressing over which company to choose. Just a simple, proven approach that even billionaire investors swear by."
+    },
+    {
+      "type": "text",
+      "content": "An index fund is like buying a tiny slice of hundreds (or even thousands) of companies all at once. Instead of picking one company and hoping it does well, you own a little bit of all of them. Think of it like this: instead of betting everything on one horse in a race, you own a piece of every horse. As long as the race keeps running, you win."
+    },
+    {
+      "type": "heading",
+      "content": "Picking Stocks vs. Index Funds: The Real Scorecard"
+    },
+    {
+      "type": "text",
+      "content": "Imagine two mums at school drop-off. Mum A spends hours every week researching individual companies, reading financial reports, and trying to pick winners. Mum B sets up an automatic $50 monthly investment into an index fund and goes about her life \u2014 school runs, meal prep, bedtime stories. After 15 years, studies show that Mum B almost certainly has more money. In fact, over 90% of professional stock pickers \u2014 people who do this full-time \u2014 fail to beat a simple index fund over the long run."
+    },
+    {
+      "type": "takeaway",
+      "content": "Over 90% of professional fund managers can't beat a simple index fund over the long term. The lazy strategy isn't just easier \u2014 it actually performs better."
+    },
+    {
+      "type": "heading",
+      "content": "Why Index Funds Are Perfect for Busy Mums"
+    },
+    {
+      "type": "text",
+      "content": "Here's what makes index funds so mum-friendly:\n\n1. They're low cost \u2014 fees can be as low as $3 per year for every $1,000 invested\n2. They're hands-off \u2014 set it up once and let it run\n3. They're diversified \u2014 if one company has a bad year, the hundreds of others balance it out\n4. They're proven \u2014 the S&P 500 index has averaged about 10% annual returns over decades\n\nYou don't need to become a finance expert. You just need to pick a solid index fund, set up a regular contribution, and let compound interest work its magic."
+    },
+    {
+      "type": "text",
+      "content": "Some popular index funds track the S&P 500 (the 500 biggest US companies), while others track the total stock market or even the global market. A total market index fund means you own a slice of practically every publicly traded company. That's thousands of companies working for your family's future while you focus on what matters most."
+    },
+    {
+      "type": "exercise",
+      "prompt": "If you could invest $100 a month, which would you rather do and why? (a) Pick 3 individual companies you've heard of and split the money between them, or (b) Put the whole $100 into one index fund that holds 500+ companies. Think about what feels safer and what the research shows.",
+      "exerciseType": "reflection"
+    },
+    {
+      "type": "heading",
+      "content": "The Warren Buffett Endorsement"
+    },
+    {
+      "type": "text",
+      "content": "Warren Buffett is one of the richest people on Earth and arguably the greatest investor who ever lived. His advice to everyday people? Buy an index fund. He even made a famous $1 million bet that a simple S&P 500 index fund would beat a group of professional hedge fund managers over 10 years. He won \u2014 and it wasn't even close. If it's good enough for Warren Buffett's family, it's good enough for ours."
+    },
+    {
+      "type": "encouragement",
+      "content": "You've just learned the investment strategy that beats the professionals. Not by being smarter or working harder \u2014 but by being patient and keeping things simple. That's something mums already excel at. You've got this."
+    }
+  ]
+}

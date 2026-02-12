@@ -1,0 +1,65 @@
+{
+  "id": "4-2",
+  "title": "Compound Interest: Your Secret Weapon",
+  "level": 4,
+  "order": 2,
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "heading",
+      "content": "The Most Powerful Force in Finance"
+    },
+    {
+      "type": "text",
+      "content": "Albert Einstein reportedly called compound interest \"the eighth wonder of the world.\" Whether he actually said it or not, the point stands: compound interest is the single most powerful tool you have for building wealth. And the best part? It does most of the work for you. All you have to do is start early and stay consistent."
+    },
+    {
+      "type": "text",
+      "content": "Here's how it works in plain English: when you invest money, it earns returns. Then those returns earn their own returns. And those returns earn returns too. It's like a snowball rolling downhill \u2014 it starts small, but it picks up more and more snow the further it goes. The longer you let it roll, the bigger it gets."
+    },
+    {
+      "type": "heading",
+      "content": "The Real Numbers: $25 a Month"
+    },
+    {
+      "type": "text",
+      "content": "Let's say you invest just $25 a month \u2014 less than a family pizza night. At an average return of 8% per year, here's what happens:\n\nAfter 10 years: You've put in $3,000 \u2192 It's grown to about $4,600\nAfter 20 years: You've put in $6,000 \u2192 It's grown to about $14,700\nAfter 30 years: You've put in $9,000 \u2192 It's grown to about $37,500\n\nRead that last one again. You put in $9,000 of your own money, and compound interest added over $28,000 on top. That's your money making money making money."
+    },
+    {
+      "type": "takeaway",
+      "content": "With compound interest, time is more important than the amount. $25 a month for 30 years turns $9,000 into $37,500. The earlier you start, the more the snowball grows."
+    },
+    {
+      "type": "heading",
+      "content": "Why Starting Now Beats Waiting"
+    },
+    {
+      "type": "text",
+      "content": "Here's a story that makes this crystal clear. Meet two mums: Sarah starts investing $50 a month when her baby is born. She stops after 10 years (total invested: $6,000). Lisa waits until her child is 10, then invests $50 a month for the next 20 years (total invested: $12,000). By the time both kids turn 30, Sarah's money has grown to more than Lisa's \u2014 even though Sarah invested half as much. That's the magic of starting early. Time beats money, every single time."
+    },
+    {
+      "type": "exercise",
+      "prompt": "Let's see your own compound interest in action! Enter the amount you could invest each month (even $10 counts). We'll show you what it could grow to over 10, 20, and 30 years at an average 8% return.",
+      "exerciseType": "calculator",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "Don't worry if your number feels small. The mum who invests $10 a month for 30 years ends up with over $15,000 from just $3,600 put in. That could be a term of university fees or a driving lesson fund for your teenager. Small amounts, given enough time, become life-changing amounts."
+    },
+    {
+      "type": "heading",
+      "content": "The Only Mistake Is Not Starting"
+    },
+    {
+      "type": "text",
+      "content": "The biggest risk isn't investing. It's leaving your money in a savings account earning 1\u20132% while inflation eats away at it. A dollar today buys less than a dollar five years from now. Investing is how you make sure your money keeps up \u2014 and gets ahead. You don't need to be perfect. You just need to begin."
+    },
+    {
+      "type": "encouragement",
+      "content": "You now understand something that most people never learn: the secret to building wealth isn't earning more \u2014 it's giving your money time to grow. Every dollar you invest today is a gift to your future self and your family. You're doing something incredible here."
+    }
+  ]
+}

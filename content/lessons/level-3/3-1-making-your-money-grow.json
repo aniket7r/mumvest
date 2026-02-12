@@ -1,0 +1,53 @@
+{
+  "id": "3-1",
+  "level": 3,
+  "order": 1,
+  "title": "Making Your Money Grow",
+  "readTimeMinutes": 6,
+  "isPremium": true,
+  "xpReward": 100,
+  "sections": [
+    {
+      "type": "text",
+      "content": "You've learned to budget, save, and protect your money. Now it's time for the most exciting part: making your money work FOR you. This is where your savings stop sitting still and start growing — even while you sleep."
+    },
+    {
+      "type": "heading",
+      "content": "THE POWER OF COMPOUND INTEREST"
+    },
+    {
+      "type": "text",
+      "content": "Albert Einstein reportedly called compound interest 'the eighth wonder of the world.' Here's why:\n\nImagine you save $50/week and earn 7% annual returns (the historical stock market average). After 1 year, you have $2,725. Nice. But after 10 years? $37,500. After 20 years? $113,000. After 30 years? $264,000.\n\nYou only put in $78,000 of your own money over 30 years. The other $186,000? That's compound interest — your money earning money on its money."
+    },
+    {
+      "type": "text",
+      "content": "The key ingredient is TIME. The earlier you start, the more compound interest works in your favour. A 25-year-old who saves $50/week until 60 will have MORE money than a 35-year-old who saves $100/week until 60. Starting early beats saving more, every single time."
+    },
+    {
+      "type": "heading",
+      "content": "YOUR FIRST STEPS INTO INVESTING"
+    },
+    {
+      "type": "text",
+      "content": "Before you invest a single dollar, make sure you have:\n\n✅ Your $500 Starter Emergency Fund (Level 2)\n✅ No high-interest debt (above 8%)\n✅ A budget you're comfortable with (Level 1)\n\nOnce those are ticked, you're ready. And investing doesn't need to be complicated. A simple index fund — which automatically buys a little piece of hundreds of companies — is how most millionaires invest. Seriously."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "calculator",
+      "prompt": "If you invested $50/week with 7% annual returns, how much would you have in 20 years? (Spoiler: the answer will surprise you!) Enter your weekly investment amount:",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "This is just the beginning. In upcoming Level 3 lessons, we'll cover:\n\n• Index funds vs managed funds (and why simple wins)\n• How to choose your first investment platform\n• Teaching your kids about money and investing\n• Setting up investments for your children's future\n• Building a family wealth plan that lasts generations"
+    },
+    {
+      "type": "takeaway",
+      "content": "Compound interest turns small, consistent savings into life-changing wealth — but only if you start. Time is your greatest asset. The best time to start was yesterday. The second best time is today."
+    },
+    {
+      "type": "encouragement",
+      "content": "Look how far you've come! From 'where does my money go?' to understanding compound interest and investing. You're not just managing money anymore — you're building wealth. Your future self (and your kids) will thank you for every lesson you've completed. Keep going — the best is yet to come! 🚀"
+    }
+  ]
+}

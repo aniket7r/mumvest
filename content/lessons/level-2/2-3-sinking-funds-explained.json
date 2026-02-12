@@ -1,0 +1,45 @@
+{
+  "id": "2-3",
+  "level": 2,
+  "order": 3,
+  "title": "Sinking Funds Explained",
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Christmas. Car registration. School uniforms. Back-to-school supplies. These aren't emergencies — they happen every single year. Yet somehow, they always feel like a surprise expense. Enter the sinking fund: your secret weapon against predictable costs."
+    },
+    {
+      "type": "heading",
+      "content": "WHAT IS A SINKING FUND?"
+    },
+    {
+      "type": "text",
+      "content": "A sinking fund is money you set aside gradually for a known future expense. Instead of scrambling to find $600 for Christmas presents in December, you save $50/month starting in January. When December arrives, the money is just... there. No stress, no credit card, no guilt.\n\nIt's the opposite of 'buy now, pay later.' It's 'save now, buy with confidence.'"
+    },
+    {
+      "type": "text",
+      "content": "Common sinking funds for families:\n\n• Christmas/Holiday gifts: $50-100/month\n• Car maintenance: $30-50/month\n• School expenses: $20-40/month\n• Annual insurance premiums: divide by 12\n• Family holiday: $50-100/month\n• Kids' birthdays: $20-30/month\n• Back to school: $25-50/month (save 6 months before)\n\nYou don't need all of these — start with the one that causes you the most stress."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "reflection",
+      "prompt": "What's the one annual expense that always catches you off guard? How much does it cost, and how much per month would you need to save for it?",
+      "inputType": "text"
+    },
+    {
+      "type": "text",
+      "content": "Pro tip: Use your MumVest goals to track sinking funds! Create a goal for each sinking fund with the total amount and deadline. The app will show you exactly how much to save each week to hit your target."
+    },
+    {
+      "type": "takeaway",
+      "content": "Sinking funds turn 'surprise' annual expenses into planned, manageable monthly savings. If it happens every year, it's not a surprise — it's a sinking fund waiting to happen."
+    },
+    {
+      "type": "encouragement",
+      "content": "This is next-level money management. When your friends are stressing about Christmas costs in December, you'll be sipping cocoa knowing it's already paid for. That's the power of planning ahead!"
+    }
+  ]
+}

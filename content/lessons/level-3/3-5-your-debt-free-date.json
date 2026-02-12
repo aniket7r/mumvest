@@ -1,0 +1,69 @@
+{
+  "id": "3-5",
+  "level": 3,
+  "order": 5,
+  "title": "Your Debt-Free Date",
+  "readTimeMinutes": 5,
+  "isPremium": true,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Imagine waking up one morning and realising: you owe nothing to anyone. No credit card balance. No personal loan. No payments hanging over your head. Just your income, your family, and complete freedom to choose what you do with every dollar. That morning has a date — and in this lesson, we're going to find it."
+    },
+    {
+      "type": "heading",
+      "content": "WHY A DATE CHANGES EVERYTHING"
+    },
+    {
+      "type": "text",
+      "content": "\"I want to be debt-free\" is a dream. \"I will be debt-free by March 2028\" is a plan. When you put a date on your goal, something shifts in your brain. It stops being a vague wish and starts being a countdown. You can see it on the calendar. You can work backward from it. You can measure your progress every single month.\n\nStudies show that people with specific financial goals are 42% more likely to achieve them than people with vague intentions. A date gives your snowball or avalanche a finish line."
+    },
+    {
+      "type": "heading",
+      "content": "CALCULATING YOUR DEBT-FREE DATE"
+    },
+    {
+      "type": "text",
+      "content": "Here's the simple maths. Don't worry — it's easier than it looks.\n\nStep 1: Add up ALL your debts. Every credit card, personal loan, store account, money owed to family — everything. Write down one total number.\n\nStep 2: Work out how much you can put toward debt each month. This is your minimum payments PLUS any extra you can squeeze out of your budget.\n\nStep 3: Divide your total debt by your monthly payment. That gives you roughly how many months until you're free.\n\nExample:\n- Total debt: $12,000\n- Monthly payment: $500\n- $12,000 / $500 = 24 months\n- That's 2 years from today.\n\nThis is a simplified calculation — interest will stretch it a bit — but it gives you a powerful starting target. And if you use the snowball or avalanche method from our previous lessons, you'll likely beat that date."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "calculator",
+      "prompt": "Let's find your debt-free date! Enter your total debt amount below. Then we'll work out how many months it will take based on what you can pay each month.",
+      "inputType": "number"
+    },
+    {
+      "type": "heading",
+      "content": "WHAT IF THE DATE FEELS TOO FAR AWAY?"
+    },
+    {
+      "type": "text",
+      "content": "If your calculation says 3, 4, or even 5 years — that's okay. Here's perspective:\n\nThose years are going to pass whether you have a plan or not. The question is: do you want to arrive at 2029 still carrying the same debt, or do you want to arrive there FREE?\n\nAnd here are ways to speed it up:\n\n- Negotiate your bills down (Lesson 3-4) and put the savings toward debt: could save $100-$200/month\n- Sell things you don't need: old baby gear, clothes the kids have outgrown, that exercise bike collecting dust. Even $500 from a weekend of selling shortens your timeline.\n- Pick up a side earner: weekend market stall, online tutoring, freelance work during nap time. Even $200/month extra cuts years off your debt.\n- Use windfalls wisely: tax return, family gifts, work bonuses. Put at least half toward debt."
+    },
+    {
+      "type": "text",
+      "content": "Here's a powerful way to think about it:\n\n- $12,000 in debt paying $400/month = debt-free in about 30 months (2.5 years)\n- Same debt paying $600/month = debt-free in about 20 months (under 2 years)\n- Same debt paying $800/month = debt-free in 15 months (just over a year)\n\nEvery extra $50/month matters. That's one less takeaway dinner. One fewer impulse buy. And it could shave months off your journey."
+    },
+    {
+      "type": "heading",
+      "content": "MAKING IT REAL: YOUR DEBT-FREE VISION"
+    },
+    {
+      "type": "text",
+      "content": "Take a moment right now and think: what will life look like on your debt-free date?\n\nMaybe it's:\n- Finally being able to save for a family holiday without guilt\n- Saying yes to the kids' school camp without checking your credit card limit\n- Sleeping through the night without that knot in your stomach about money\n- Starting to invest and build real wealth for your family's future\n- Looking your kids in the eye and knowing you've modelled what financial strength looks like\n\nThat vision isn't a fantasy. It's a destination. And you now have the map to get there."
+    },
+    {
+      "type": "text",
+      "content": "Your action plan for today:\n\n1. Write your total debt number on a piece of paper.\n2. Write your monthly debt payment amount next to it.\n3. Calculate your debt-free date and circle it on a calendar.\n4. Put that calendar somewhere you'll see it every day — the fridge, your bathroom mirror, your phone wallpaper.\n5. Tell one person about your date. Saying it out loud makes it real."
+    },
+    {
+      "type": "takeaway",
+      "content": "A debt-free date turns a dream into a deadline. Divide your total debt by your monthly payment to find your target. Then speed it up by negotiating bills, selling what you don't need, and putting every extra dollar toward your debt. The years will pass anyway — make them count."
+    },
+    {
+      "type": "encouragement",
+      "content": "You've now completed every lesson in the Debt Freedom level. You know the snowball, the avalanche, how to negotiate bills, and how to set your debt-free date. That's not just knowledge — that's power. Every payment you make from today is a step toward the morning you wake up owing nothing. That morning is coming. You're building it right now, one lesson and one payment at a time. We are so proud of you."
+    }
+  ]
+}

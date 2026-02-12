@@ -1,0 +1,51 @@
+{
+  "id": "2-5",
+  "level": 2,
+  "order": 5,
+  "title": "Automating Your Savings",
+  "readTimeMinutes": 5,
+  "isPremium": false,
+  "xpReward": 75,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Here's the secret of every good saver: they don't rely on willpower. They automate. Because willpower runs out — especially when you're a busy parent managing a million things. Automation doesn't forget, doesn't get tired, and doesn't give in to impulse."
+    },
+    {
+      "type": "heading",
+      "content": "THE PAY-YOURSELF-FIRST SYSTEM"
+    },
+    {
+      "type": "text",
+      "content": "The concept is beautifully simple: on payday, BEFORE you spend anything, your savings are automatically transferred to your savings account. You never see the money in your spending account, so you never miss it.\n\nHere's the setup:\n\n1. Pick your savings amount (start small — $25/week is fine)\n2. Set up an automatic transfer for payday\n3. The money moves before you can spend it\n4. Your spending account gets what's left\n5. You live on what's left — and it works because you adjust naturally"
+    },
+    {
+      "type": "text",
+      "content": "The psychology behind this is powerful. Studies show that people who automate savings save 3x more than those who do it manually. Why? Because manual saving requires a decision every single time — 'Should I save this week?' With automation, saving is the default. Not saving would require effort."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "checklist",
+      "prompt": "What can you automate this week? Check everything you're ready to set up:",
+      "inputType": "text",
+      "options": [
+        "Automatic transfer to savings on payday",
+        "Automatic bill payments for fixed bills",
+        "Round-up savings on purchases",
+        "Auto-transfer to sinking fund goals"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Pro tip: Start with an amount that feels almost too easy. $10/week. $20/week. Once you've gone 4 weeks without noticing, bump it up by $5. Keep nudging it up until you find your sweet spot. This is called the 'set and forget, then stretch' method."
+    },
+    {
+      "type": "takeaway",
+      "content": "Automate your savings so you don't have to decide every week. Pay yourself first, live on the rest. The families who save the most aren't the most disciplined — they're the most automated."
+    },
+    {
+      "type": "encouragement",
+      "content": "You've completed Level 2! You now have an emergency fund plan, sinking funds for predictable expenses, a debt payoff strategy, and automated savings. You're building a fortress around your family's finances. Level 3 is where the real magic begins — growing your money!"
+    }
+  ]
+}

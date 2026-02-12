@@ -1,0 +1,15 @@
+[
+  { "id": "first-step", "name": "First Step", "description": "Complete onboarding", "icon": "👟", "criteria": "onboarding_completed" },
+  { "id": "money-aware", "name": "Money Aware", "description": "Complete all Level 1 lessons", "icon": "🧠", "criteria": "level_1_complete" },
+  { "id": "smart-saver", "name": "Smart Saver", "description": "Complete all Level 2 lessons", "icon": "📚", "criteria": "level_2_complete" },
+  { "id": "7-day-streak", "name": "Week Warrior", "description": "Maintain a 7-day streak", "icon": "🔥", "criteria": "streak_7" },
+  { "id": "30-day-streak", "name": "Monthly Master", "description": "Maintain a 30-day streak", "icon": "💎", "criteria": "streak_30" },
+  { "id": "century-saver", "name": "Century Saver", "description": "Save a total of $100", "icon": "💯", "criteria": "saved_100" },
+  { "id": "grand-saver", "name": "Grand Saver", "description": "Save a total of $1,000", "icon": "🏆", "criteria": "saved_1000" },
+  { "id": "iron-will", "name": "Iron Will", "description": "Complete the No-Spend Weekend challenge", "icon": "🛡️", "criteria": "challenge_no_spend" },
+  { "id": "meal-master", "name": "Meal Master", "description": "Complete the Meal Prep Master challenge", "icon": "🍱", "criteria": "challenge_meal_prep" },
+  { "id": "smart-swapper", "name": "Smart Swapper", "description": "Adopt 10 Smart Swaps", "icon": "🔄", "criteria": "swaps_10" },
+  { "id": "moment-reader", "name": "Moment Reader", "description": "Read 15 Money Moments", "icon": "📖", "criteria": "moments_15" },
+  { "id": "goal-getter", "name": "Goal Getter", "description": "Complete your first savings goal", "icon": "🎯", "criteria": "goal_completed" },
+  { "id": "sharing-is-caring", "name": "Sharing Is Caring", "description": "Share your progress with someone", "icon": "💝", "criteria": "shared_progress" }
+]

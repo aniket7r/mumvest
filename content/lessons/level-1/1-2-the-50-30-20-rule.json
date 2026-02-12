@@ -1,0 +1,45 @@
+{
+  "id": "1-2",
+  "level": 1,
+  "order": 2,
+  "title": "The 50/30/20 Rule",
+  "readTimeMinutes": 5,
+  "isPremium": false,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "text",
+      "content": "The 50/30/20 rule is the simplest budgeting framework ever created. Senator Elizabeth Warren popularized it, and millions of families use it because it actually works."
+    },
+    {
+      "type": "heading",
+      "content": "HOW IT WORKS"
+    },
+    {
+      "type": "text",
+      "content": "Take your monthly take-home pay (after tax) and split it three ways:\n\n50% → NEEDS — Rent or mortgage, groceries, utilities, transport, insurance. The essentials you can't live without.\n\n30% → WANTS — Dining out, entertainment, subscriptions, shopping, hobbies. The things that make life fun.\n\n20% → SAVINGS & DEBT — Emergency fund, savings goals, extra debt payments. Your future self will thank you."
+    },
+    {
+      "type": "text",
+      "content": "For example, if you bring home $4,000/month:\n• Needs: $2,000\n• Wants: $1,200\n• Savings: $800\n\nThat $800/month in savings becomes $9,600/year. In 5 years, that's $48,000 — enough for a house deposit in many areas!"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "calculator",
+      "prompt": "What's your monthly take-home pay? Let's see your 50/30/20 split:",
+      "inputType": "number"
+    },
+    {
+      "type": "text",
+      "content": "Don't worry if your split doesn't match perfectly. Many families spend 60% or even 70% on needs — especially with kids. The point is to know your numbers and slowly nudge them in the right direction."
+    },
+    {
+      "type": "takeaway",
+      "content": "The 50/30/20 rule isn't about perfection — it's a compass, not a cage. Even getting 5% closer to these ratios puts you ahead of most households."
+    },
+    {
+      "type": "encouragement",
+      "content": "You now have a framework that millionaires use. Seriously. The wealthiest families in the world budget — they just don't talk about it. You're in good company!"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "1-5",
+  "level": 1,
+  "order": 5,
+  "title": "Money Mindset Reset",
+  "readTimeMinutes": 5,
+  "isPremium": false,
+  "xpReward": 50,
+  "sections": [
+    {
+      "type": "text",
+      "content": "Before we go further, let's talk about the voice in your head. You know the one: 'I'm bad with money.' 'I'll never be able to save.' 'Rich people are just lucky.' These are money stories, and they're holding you back."
+    },
+    {
+      "type": "heading",
+      "content": "WHERE MONEY STORIES COME FROM"
+    },
+    {
+      "type": "text",
+      "content": "Your relationship with money was shaped by age 7. That's not an exaggeration — research from Cambridge University shows that our core money habits are formed by age seven, based on what we saw our parents and caregivers do.\n\nIf your parents argued about money, you might avoid thinking about it.\nIf money was scarce, you might struggle to spend even when you can afford to.\nIf money was never discussed, you might feel shame about learning the basics now."
+    },
+    {
+      "type": "text",
+      "content": "Here's the truth: none of these stories are your fault. But they are your responsibility to rewrite. And the fact that you're here, learning, means you're already rewriting them."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "reflection",
+      "prompt": "Complete this sentence: 'Growing up, I learned that money is...' Write the first thing that comes to mind — don't filter it.",
+      "inputType": "text"
+    },
+    {
+      "type": "text",
+      "content": "Now here's your new money story. Repeat it whenever the old voice shows up:\n\n'I am learning to be confident with money. I don't need to be perfect — I just need to keep showing up. Every small step I take builds a better future for my family.'"
+    },
+    {
+      "type": "takeaway",
+      "content": "Your money story was written for you as a child. But you're the author now. Small, consistent actions rewrite old beliefs faster than any affirmation."
+    },
+    {
+      "type": "encouragement",
+      "content": "You've completed Level 1! You now understand where your money goes, have a framework for spending, a simple budget, a weekly check-in habit, and a fresh money mindset. That's HUGE. You're not the same person who started this journey. Level 2 awaits — let's keep going!"
+    }
+  ]
+}
