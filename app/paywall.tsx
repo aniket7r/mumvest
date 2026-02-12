@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -192,6 +192,21 @@ export default function PaywallScreen() {
             Cancel anytime. Payment will be charged to your Apple ID account.
             Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period.
           </Text>
+
+          {/* Judge access — web only */}
+          {Platform.OS === 'web' && (
+            <TouchableOpacity
+              onPress={() => {
+                useSubscriptionStore.getState().webUnlock();
+                router.back();
+              }}
+              className="mt-6 border-2 border-dashed border-amber rounded-2xl py-4 px-6 items-center"
+            >
+              <Text className="text-amber text-xs font-bold tracking-wider mb-1">HACKATHON JUDGE?</Text>
+              <Text className="text-charcoal text-base font-bold">Tap here to unlock Pro access</Text>
+              <Text className="text-warmgrey text-xs mt-1">Instantly unlocks all premium features</Text>
+            </TouchableOpacity>
+          )}
         </View>
         <View className="h-8" />
       </ScrollView>
