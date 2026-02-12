@@ -44,8 +44,7 @@
       "favicon": "./assets/icon.png"
     },
     "experiments": {
-      "typedRoutes": true,
-      "baseUrl": "/mumvest"
+      "typedRoutes": true
     }
   }
 }
